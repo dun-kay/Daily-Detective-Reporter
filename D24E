@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body style ="max width: 430px; min width: 320px; padding: 10%; color: white;"
+  <div class="row" style="bottom margin: 10%">
+    <div class="column" style="allign: left;">
+      <p style="color: black; font style: times; font size: 13px;">
+        <u>archive</u>
+      </p>
+    </div>
+    <div class="column" style="allign:centre;">
+      <img style="width: 50px; height: auto;" src="" alt=""/>
+        <p style="color: black; font style: times; font size: 13px">
+          <i><b>D24E</b></i>
+        </p>
+    <div class="column" style ="allign: right;">
+      <p style="color: black; font style: times; font size: 13px;">
+        <u>my statistics</u>
+      </p>
+    </div>
+  </div>
+  <div style="max width: 344px; max height: 344px; min width: 256px; min height: 256px;">
+    //game goes here
+  </div>
+  <div style="allign: left; margin top: 10%;">
+    <p style="color: black; font style: times; font size: 13px">
+      <i>D24E: A Dun. Kay Puzzle</i>
+    </p>
+  </div>
+  <div style="allign: left; margin top: 5px;">
+    <img style="width: 50px; height: auto;" src="" alt=""><a href="" target="_blank">
+    </a></img>
+  </div>

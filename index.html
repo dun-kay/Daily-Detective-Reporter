@@ -1,57 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-.body {
-  float: center;
-  }
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Detective Reporter Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-  
-<body class="body" style ="max-width: 430px; min-width: 320px; padding: 10%; color: white;">
-  <div class="row">
-  <div class="column">
-      <p style="color: black; font style: times; font size: 13px;">
-        <u>archive</u>
-  </div>
-  <div class="column" style="float:center;">
-      <img style="width: 50px; height: auto;" src="" alt=""/>
-        <p style="color: black; font style: times; font size: 13px">
-          <i><b>D24E</b></i>
-  </div>
-  <div class="column style="float:right;"">
-      <p style="color: black; font style: times; font size: 13px;">
-        <u>my statistics</u>
-  </div>
-</div>
+<body>
+    <div id="game-container">
+        <!-- Header -->
+        <div id="header">
+            <button class="header-button" id="rules-button">Rules ?</button>
+            <button class="header-button" id="play-more-button">Play more</button>
+            <div id="game-title">Daily Detective Reporter Game</div>
+            <div id="date-display">15 Oct 2024</div>
+            <div id="guess-counter">Guess: 0</div>
+        </div>
+        
+        <!-- Clues Section -->
+        <div id="clues-container">
+            <!-- Clue rows with emojis/letters as tiles -->
+            <div class="clue">
+                <div class="tile">🇨🇦</div>
+                <div class="tile">🇮🇳</div>
+                <div class="tile">🇩</div>
+                <div class="tile">🇹</div>
+            </div>
+            <div class="clue">
+                <div class="tile">🤝</div>
+                <div class="tile">A</div>
+                <div class="tile">C</div>
+                <div class="tile">🚀</div>
+            </div>
+            <div class="clue">
+                <div class="tile">💻</div>
+                <div class="tile">S</div>
+                <div class="tile">E</div>
+                <div class="tile">🔍</div>
+            </div>
+            <div class="clue">
+                <div class="tile">🤖</div>
+                <div class="tile">📰</div>
+                <div class="tile">📉</div>
+                <div class="tile">🗞️</div>
+            </div>
+            <div class="clue">
+                <div class="tile">🚨</div>
+                <div class="tile">📈</div>
+                <div class="tile">👤</div>
+                <div class="tile">📊</div>
+            </div>
+        </div>
 
-  <div style="max-width: 344px; max-height: 344px; min-width: 256px; min-height: 256px;">
-    // game goes here
-  </div>
-  <div style="align: left; margin top: 10%;">
-    <p style="color: black; font style: times; font size: 13px">
-      <i>D24E: A Dun. Kay Puzzle</i>
-    </p>
-  </div>
-  <div style="align: left; margin top: 5px;">
-    <img style="width: 50px; height: auto;" src="" alt=""><a href="" target="_blank">
-    </a></img>
-  </div>
+        <!-- Hint buttons -->
+        <div id="hints-container">
+            <button class="hint-button">Tap to reveal hint 1 (place)</button>
+            <button class="hint-button">Tap to reveal hint 2 (subject)</button>
+            <button class="hint-button">Tap to reveal hint 3 (people)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -22,3 +22,9 @@ document.querySelectorAll(".hint-button").forEach((button, index) => {
         }
     };
 });
+// Tying js
+document.querySelectorAll('.column').forEach(input => {
+    input.addEventListener('click', () => {
+        input.focus();
+    });
+});

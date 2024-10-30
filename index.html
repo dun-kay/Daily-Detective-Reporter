@@ -1,95 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Detective Reporter Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="game-container">
-        <!-- Header -->
-        <div id="header">
-            <button class="header-button" id="rules-button">Rules ?</button>
-            <button class="header-button" id="play-more-button">Play more</button>
-            <div id="game-title">Daily Detective Reporter Game</div>
-            <div id="date-display">15 Oct 2024</div>
-            <div id="guess-counter">Guess: 0</div>
+<div>
+  <link href="stylesheet.css" rel="stylesheet" />
+  <div class="c_main-body-frame">
+    <div class="c_main-body-frame01">
+      <div class="c_main-body-frame02">
+        <div class="c_main-body-frame03">
+          <div class="c_main-body-frame04">
+            <div class="c_main-body-frame05">
+              <div class="c_main-body-text">
+                <p class="c_main-body-text01">Tap to reveal hint 3 (people)</p>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame06">
+            <div class="c_main-body-frame07">
+              <div class="c_main-body-text02">
+                <p class="c_main-body-text03">Tap to reveal hint 2 (subject)</p>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame08">
+            <div class="c_main-body-frame09">
+              <div class="c_main-body-text04">
+                <p class="c_main-body-text05">Tap to reveal hint 1 (place)</p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Clues Section -->
-        <div id="clues-container">
-            <!-- Clue Columns -->
-            <div class="clue-column">
-                <div class="tile">C</div>
-                <div class="tile">🇨🇦</div>
-                <div class="tile">N</div>
-                <div class="tile">A</div>
-                <div class="column-container">
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
+      </div>
+      <div class="c_main-body-frame10">
+        <div class="c_main-body-frame11">
+          <div class="c_main-body-frame12">
+            <img
+              src="./assets/13525.svg"
+              alt="frame"
+              width="43"
+              height="219"
+              class="c_main-body-frame13"
+              />
+            <div class="c_main-body-frame14">
+              <div class="c_main-body-frame15">
+                <div class="c_main-body-frame16">
+                  <div class="c_main-body-frame17">
+                    <div class="c_main-body-text06">
+                      <p class="c_main-body-text07">C</p>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="clue-column">
-                <div class="tile">🇮🇳</div>
-                <div class="tile">D</div>
-                <div class="tile">I</div>
-                <div class="tile">A</div>
-                <div class="column-container">
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
+                <div class="c_main-body-frame18">
+                  <div class="c_main-body-frame19">
+                    <div class="c_main-body-text08">
+                      <p class="c_main-body-text09">📈</p>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="clue-column">
-                <div class="tile">🤝</div>
-                <div class="tile">C</div>
-                <div class="tile">T</div>
-                <div class="tile">A</div>
-                <div class="column-container">
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
+                <div class="c_main-body-frame20">
+                  <div class="c_main-body-frame21">
+                    <div class="c_main-body-text10">
+                      <p class="c_main-body-text11">S</p>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="clue-column">
-                <div class="tile">😬</div>
-                <div class="tile">S</div>
-                <div class="tile">C</div>
-                <div class="tile">E</div>
-                <div class="column-container">
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
+                <div class="c_main-body-frame22">
+                  <div class="c_main-body-frame23">
+                    <div class="c_main-body-text12">
+                      <p class="c_main-body-text13">E</p>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="clue-column">
-                <div class="tile">📈</div>
-                <div class="tile">C</div>
-                <div class="tile">T</div>
-                <div class="tile">S</div>
-                <div class="column-container">
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
-                    <input class="column" maxlength="1" />
+          </div>
+          <div class="c_main-body-frame24">
+            <img
+              src="./assets/13563.svg"
+              alt="frame"
+              width="43"
+              height="219"
+              class="c_main-body-frame25"
+              />
+            <div class="c_main-body-frame26">
+              <div class="c_main-body-frame27">
+                <div class="c_main-body-frame28">
+                  <div class="c_main-body-frame29">
+                    <div class="c_main-body-text14">
+                      <p class="c_main-body-text15">😬</p>
+                    </div>
+                  </div>
                 </div>
+                <div class="c_main-body-frame30">
+                  <div class="c_main-body-frame31">
+                    <div class="c_main-body-text16">
+                      <p class="c_main-body-text17">S</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame32">
+                  <div class="c_main-body-frame33">
+                    <div class="c_main-body-text18">
+                      <p class="c_main-body-text19">🏹</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame34">
+                  <div class="c_main-body-frame35">
+                    <div class="c_main-body-text20">
+                      <p class="c_main-body-text21">T</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="c_main-body-frame36">
+            <img
+              src="./assets/13601.svg"
+              alt="frame"
+              width="43"
+              height="219"
+              class="c_main-body-frame37"
+              />
+            <div class="c_main-body-frame38">
+              <div class="c_main-body-frame39">
+                <div class="c_main-body-frame40">
+                  <div class="c_main-body-frame41">
+                    <div class="c_main-body-text22">
+                      <p class="c_main-body-text23">👯‍♂️</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame42">
+                  <div class="c_main-body-frame43">
+                    <div class="c_main-body-text24">
+                      <p class="c_main-body-text25">C</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame44">
+                  <div class="c_main-body-frame45">
+                    <div class="c_main-body-text26">
+                      <p class="c_main-body-text27">🤝</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame46">
+                  <div class="c_main-body-frame47">
+                    <div class="c_main-body-text28">
+                      <p class="c_main-body-text29">D</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame48">
+            <img
+              src="./assets/13639.svg"
+              alt="frame"
+              width="43"
+              height="219"
+              class="c_main-body-frame49"
+              />
+            <div class="c_main-body-frame50">
+              <div class="c_main-body-frame51">
+                <div class="c_main-body-frame52">
+                  <div class="c_main-body-frame53">
+                    <div class="c_main-body-text30">
+                      <p class="c_main-body-text31">I</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame54">
+                  <div class="c_main-body-frame55">
+                    <div class="c_main-body-text32">
+                      <p class="c_main-body-text33">A</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame56">
+                  <div class="c_main-body-frame57">
+                    <div class="c_main-body-text34">
+                      <p class="c_main-body-text35">D</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame58">
+                  <div class="c_main-body-frame59">
+                    <div class="c_main-body-text36">
+                      <p class="c_main-body-text37">🇮🇳</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame60">
+            <img
+              src="./assets/13677.svg"
+              alt="frame"
+              width="43"
+              height="219"
+              class="c_main-body-frame61"
+              />
+            <div class="c_main-body-frame62">
+              <div class="c_main-body-frame63">
+                <div class="c_main-body-frame64">
+                  <div class="c_main-body-frame65">
+                    <div class="c_main-body-text38">
+                      <p class="c_main-body-text39">N</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame66">
+                  <div class="c_main-body-frame67">
+                    <div class="c_main-body-text40">
+                      <p class="c_main-body-text41">🇨🇦</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame68">
+                  <div class="c_main-body-frame69">
+                    <div class="c_main-body-text42">
+                      <p class="c_main-body-text43">A</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c_main-body-frame70">
+                  <div class="c_main-body-frame71">
+                    <div class="c_main-body-text44">
+                      <p class="c_main-body-text45">C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Hint buttons -->
-        <div id="hints-container">
-            <button class="hint-button">Tap to reveal hint 1 (place)</button>
-            <button class="hint-button">Tap to reveal hint 2 (subject)</button>
-            <button class="hint-button">Tap to reveal hint 3 (people)</button>
+      </div>
+      <div class="c_main-body-frame72">
+        <div class="c_main-body-frame73">
+          <div class="c_main-body-frame74">
+            <div class="c_main-body-frame75">
+              <div class="c_main-body-text46">
+                <p class="c_main-body-text47">Daily Detective</p>
+                <p class="c_main-body-text48">Reporter Game</p>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame76">
+            <div class="c_main-body-frame77">
+              <div class="c_main-body-text49">
+                <p class="c_main-body-text50">Rules ?</p>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame78">
+            <div class="c_main-body-frame79">
+              <div class="c_main-body-text51">
+                <p class="c_main-body-text52">Play more</p>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame80">
+            <div class="c_main-body-frame81">
+              <div class="c_main-body-text53">
+                <p class="c_main-body-text54">Guess: 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="c_main-body-frame82">
+            <div class="c_main-body-frame83">
+              <div class="c_main-body-text55">
+                <p class="c_main-body-text56">15 Oct 2024</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  </div>
+</div>

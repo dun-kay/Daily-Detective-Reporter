@@ -1,0 +1,92 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1d2542;
+}
+
+#game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background-color: #303c6b;
+    padding: 20px;
+    border-radius: 10px;
+    color: #e1e3f8;
+}
+
+/* Header styling */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.header-button {
+    background-color: #4e5a8c;
+    color: #e1e3f8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+#game-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#date-display, #guess-counter {
+    background-color: #4e5a8c;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Clues section styling */
+#clues-container {
+    margin: 20px 0;
+}
+
+.clue {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4e5a8c;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: #3a467b;
+    color: #e1e3f8;
+}
+
+/* Hint buttons styling */
+#hints-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hint-button {
+    background-color: #4e5a8c;
+    color: #e1e3f8;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}

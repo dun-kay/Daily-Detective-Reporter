@@ -2099,9 +2099,9 @@ textarea.w-input, textarea.w-select {
 }
 
 .div-block-game {
-  background-color: #333d73;
+  background-color: #333d73 !important;
   border-radius: 10px;
-  width: 360px;
+  width: 360px !important;
   height: 750px;
   margin: 8px;
   display: block;
@@ -2243,7 +2243,7 @@ textarea.w-input, textarea.w-select {
 .div-block-header {
   grid-column-gap: 8px;
   grid-row-gap: 8px;
-  background-color: #0f1936;
+  background-color: #0f1936 !important;
   border-radius: 10px;
   flex-flow: column;
   justify-content: flex-start;
@@ -2253,7 +2253,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .div-block-play {
-  background-color: #0f1936;
+  background-color: #0f1936 !important;
   border-radius: 10px;
   flex-flow: row;
   justify-content: center;

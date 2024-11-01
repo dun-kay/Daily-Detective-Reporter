@@ -2228,7 +2228,21 @@ textarea.w-input, textarea.w-select {
   font-size: 12px;
   font-weight: 700;
 }
-
+.input {
+  color: #fff;
+  background-color: #b392de;
+  border-radius: 3px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+  padding: 0;
+  font-size: 23px;
+  font-weight: 700;
+  display: flex;
+}
 .div-block-2 {
   color: #fff;
   background-color: #b392de;

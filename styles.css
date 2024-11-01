@@ -2277,15 +2277,56 @@ textarea.w-input, textarea.w-select {
   display: flex;
 }
 
-.clue-2-column, .clue-3-column, .clue-4-column {
-  width: 20%;
-  margin-left: 2px;
-  margin-right: 2px;
+.clue-2-column {
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 2px;
+  display: flex;
+}
+
+.clue-3-column {
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 2px;
+  display: flex;
+}
+
+.clue-4-column {
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 2px;
+  display: flex;
 }
 
 .clue-5-column {
-  width: 20%;
-  margin-left: 2px;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 2px;
+  display: flex;
 }
 
 .clue-1-div {

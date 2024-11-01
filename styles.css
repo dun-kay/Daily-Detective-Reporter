@@ -2389,7 +2389,6 @@ textarea.w-input, textarea.w-select {
 .div-block-2 input {
   width: 100%;
   height: 100%;
-  background-color: #b392de;
   color: #fff;
   border-radius: 3px;
   border: none;
@@ -2401,6 +2400,10 @@ textarea.w-input, textarea.w-select {
 
 .div-block-2.blank {
   background-color: #414e96;
+}
+
+.div-block-2.blank.active {
+  background-color: #b392de;
 }
 
 .div-block-2.blank.rule-1 {

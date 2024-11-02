@@ -2399,11 +2399,11 @@ textarea.w-input, textarea.w-select {
 }
 
 .div-block-2.blank {
-  background-color: #414e96;
+  background-color: #414e96 important!;
 }
 
 .div-block-2.blank.active {
-  background-color: #b392de;
+  background-color: #b392de important!;
 }
 
 .div-block-2.blank.rule-1 {

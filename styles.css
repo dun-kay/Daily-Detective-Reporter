@@ -2365,7 +2365,6 @@ label {
     margin: 0;
     padding: 0;
 }
-
 /* Popup Background */
 .popup {
     display: none; /* Hidden by default */
@@ -2397,7 +2396,9 @@ label {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
+    color: #333;
 }
+
 
 /* Style adjustments for provided content */
 .button-2 {

@@ -26,8 +26,12 @@ document.querySelectorAll('.input-row input').forEach(input => {
 });
 
 
+
+
+
+
 // Select elements
-const openPopupButton = document.getElementById('rules'); // Updated ID for opening the popup
+const openPopupButton = document.getElementById('rules');
 const popup = document.getElementById('popup');
 const backToGameButton = document.getElementById('back-to-game'); // Button that closes the popup
 

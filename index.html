@@ -1,135 +1,130 @@
+HTML:
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
     <title>Daily Detective Reporter</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link href="styles.css"
+          rel="stylesheet" type="text/css">
+
+    <link href="" rel="shortcut icon" type="image/x-icon">
+    <link href="" rel="apple-touch-icon">
 </head>
+
+
 <body class="game">
-    <div class="game-container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="header-left">
-                <a id="rules" href="#" class="button">Rules ?</a>
-                <a id="play-more" href="#" class="button">Play more</a>
-            </div>
-            <div class="header-center">
-                <h1 id="title" class="title">Daily Detective Reporter</h1>
-            </div>
-            <div class="header-right">
-                <div id="date" class="date">15 Oct 2024</div>
-                <div id="guesses" class="guess-count">Guess: 0</div>
-            </div>
-        </header>
-
-        <!-- Game Content Section -->
-        <main class="game-content">
-            <!-- Clue Column 1 -->
-            <div id="col1" class="clue-column">
-                <div id="c1" class="clue-row">
-                    <div class="clue">C</div>
-                    <div class="clue">A</div>
-                    <div class="clue">N</div>
-                    <div class="clue">🇨🇦</div>
+    <div class="div-block-game">
+        <div class="div-block-header">
+            <div class="columns w-row">
+                <div class="column-1 w-col w-col-4">
+                    <a id="rules" href="#" class="button-2 w-button">Rules ?</a>
+                    <a id="play-more" href="#" class="button-2 w-button">Play more</a>
                 </div>
-                <div class="input-row">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
+                <div class="column-2 w-col w-col-4">
+                    <div id="title" class="text-block-1">Daily Detective Reporter</div>
+                </div>
+                <div class="column-3 w-col w-col-4">
+                    <div id="date" class="text-block-2">15 Oct 2024</div>
+                    <div id="guesses" class="guess-count">Guess: 0</div>
                 </div>
             </div>
-
-            <!-- Clue Column 2 -->
-            <div id="col2" class="clue-column">
-                <div id="c2" class="clue-row">
-                    <div class="clue">🇮🇳</div>
-                    <div class="clue">D</div>
-                    <div class="clue">I</div>
-                    <div class="clue">A</div>
+        </div>
+        
+        <div class="div-block-play">
+            <div id="col1" class="clue-1-column">
+                <div id="c1" class="clue-1-div">
+                    <div id="c1.1" class="div-block-2">C</div>
+                    <div id="c1.2" class="div-block-2 w-node-_55670de3-3b89-579c-041f-0a225f2e242d-4875f9f0">A</div>
+                    <div id="c1.3" class="div-block-2 w-node-c6185cd8-3db1-48e7-9a01-91b540683759-4875f9f0">N</div>
+                    <div id="c1.4" class="div-block-2 w-node-ccff6a92-fd5f-5584-6019-d297ffa9a325-4875f9f0">🇨🇦</div>
                 </div>
-                <div class="input-row">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
+                <div id="l1.1" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- C -->
+                <div id="l1.2" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- A -->
+                <div id="l1.3" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- N -->
+                <div id="l1.4" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- A -->
+                <div id="l1.5" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- D -->
+                <div id="l1.6" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- A -->
+            </div>
+            
+            <div id="col2" class="clue-2-column">
+                <div id="c2" class="clue-1-div">
+                    <div id="c2.1" class="div-block-2">🇮🇳</div>
+                    <div id="c2.2" class="div-block-2 w-node-_266cce2d-44f0-7c9b-3ca7-a946b4537cb6-4875f9f0">D</div>
+                    <div id="c2.3" class="div-block-2 w-node-_266cce2d-44f0-7c9b-3ca7-a946b4537cb8-4875f9f0">I</div>
+                    <div id="c2.4" class="div-block-2 w-node-_266cce2d-44f0-7c9b-3ca7-a946b4537cba-4875f9f0">A</div>
                 </div>
+                <div id="l2.1" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- I -->
+                <div id="l2.2" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- N -->
+                <div id="l2.3" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- D -->
+                <div id="l2-4" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- I -->
+                <div id="l2.5" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- A -->
             </div>
 
-            <!-- Clue Column 3 -->
-            <div id="col3" class="clue-column">
-                <div id="c3" class="clue-row">
-                    <div class="clue">D</div>
-                    <div class="clue">🤝</div>
-                    <div class="clue">👯‍♂️</div>
-                    <div class="clue">C</div>
+            <div id="col3" class="clue-3-column">
+                <div id="c3" class="clue-1-div">
+                    <div id="c3.1" class="div-block-2">D</div>
+                    <div id="c3.2" class="div-block-2 w-node-_6ce22014-2cf7-53de-5871-63c98729a987-4875f9f0">🤝</div>
+                    <div id="c3.3" class="div-block-2 w-node-_6ce22014-2cf7-53de-5871-63c98729a989-4875f9f0">👯‍♂️</div>
+                    <div id="c3.4" class="div-block-2 w-node-_6ce22014-2cf7-53de-5871-63c98729a98b-4875f9f0">C</div>
                 </div>
-                <div class="input-row">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                </div>
+                <div id="l3.1" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- D -->
+                <div id="l3.2" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- I -->
+                <div id="l3.3" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- P -->
+                <div id="l3.4" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- L -->
+                <div id="l3.5" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- O -->
+                <div id="l3.6" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- M -->
+                <div id="l3.7" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- A -->
+                <div id="l3.8" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- T -->
+                <div id="l3.9" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- I -->
+                <div id="l3.10" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- C -->
             </div>
 
-            <!-- Clue Column 4 -->
-            <div id="col4" class="clue-column">
-                <div id="c4" class="clue-row">
-                    <div class="clue">T</div>
-                    <div class="clue">🏹</div>
-                    <div class="clue">😬</div>
-                    <div class="clue">S</div>
+            <div id="col4" class="clue-4-column">
+                <div id="c4" class="clue-1-div">
+                    <div id="c4.1" class="div-block-2">T</div>
+                    <div id="c4.2" class="div-block-2 w-node-_7a476d58-79e1-e26f-0146-b852030939e3-4875f9f0">🏹</div>
+                    <div id="c4.3" class="div-block-2 w-node-_7a476d58-79e1-e26f-0146-b852030939e5-4875f9f0">😬</div>
+                    <div id="c4.4" class="div-block-2 w-node-_7a476d58-79e1-e26f-0146-b852030939e7-4875f9f0">S</div>
                 </div>
-                <div class="input-row">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                </div>
+                <div id="l4.1" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- T -->
+                <div id="l4.2" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- E -->
+                <div id="l4.3" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- N -->
+                <div id="l4.4" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- S -->
+                <div id="l4.5" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- I -->
+                <div id="l4.6" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- O -->
+                <div id="l4.7" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- N -->
+                <div id="l4.8" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- S -->
             </div>
 
-            <!-- Clue Column 5 -->
-            <div id="col5" class="clue-column">
-                <div id="c5" class="clue-row">
-                    <div class="clue">E</div>
-                    <div class="clue">S</div>
-                    <div class="clue">C</div>
-                    <div class="clue">📈</div>
+            <div id="col5" class="clue-5-column">
+                <div id="c5" class="clue-1-div">
+                    <div id="c5.1" class="div-block-2">E</div>
+                    <div id="c5.2" class="div-block-2 w-node-e9424e13-990a-b6b6-36f7-f369b8c28370-4875f9f0">S</div>
+                    <div id="c5.3" class="div-block-2 w-node-e9424e13-990a-b6b6-36f7-f369b8c28372-4875f9f0">C</div>
+                    <div id="c5.4" class="div-block-2 w-node-e9424e13-990a-b6b6-36f7-f369b8c28374-4875f9f0">📈</div>
                 </div>
-                <div class="input-row">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                    <input type="text" maxlength="1">
-                </div>
+                <div id="l5.1" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- E -->
+                <div id="l5.2" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- S -->
+                <div id="l5.3" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- C -->
+                <div id="l5.4" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- A-->
+                <div id="l5.5" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- L -->
+                <div id="l5.6" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- A -->
+                <div id="l5.7" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- T -->
+                <div id="l5.8" class="div-block-2 blank"><input type="text" maxlength="1" /></div><!-- E -->
             </div>
-        </main>
+        </div>
 
-        <!-- Footer Section -->
-        <footer class="footer">
-            <a href="#" class="button hint">Tap to reveal hint 1 (common letter)</a>
-            <a href="#" class="button hint">Tap to reveal hint 2 (helpful letters)</a>
-            <a href="#" class="button hint">Tap to reveal hint 3 (emergency letters)</a>
-        </footer>
+        <div class="div-block-header">
+            <a id="h1" href="#" class="button-2 hint w-button">Tap to reveal hint 1 (common letter)</a>
+            <a id="h2" href="#" class="button-2 hint w-button">Tap to reveal hint 2 (helpful letters)</a>
+            <a id="h3" href="#" class="button-2 hint w-button">Tap to reveal hint 3 (emergency letters)</a>
+        </div>
     </div>
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
+    
 </body>
-</html>

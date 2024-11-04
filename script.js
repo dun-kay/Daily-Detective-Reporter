@@ -24,3 +24,28 @@ document.querySelectorAll('.input-row input').forEach(input => {
         event.target.value = event.target.value.toUpperCase();
     });
 });
+
+
+// Select elements
+const openPopupButton = document.getElementById('rules'); // Updated ID for opening the popup
+const popup = document.getElementById('popup');
+const backToGameButton = document.getElementById('back-to-game'); // Button that closes the popup
+
+// Show popup when the "Rules" link is clicked
+openPopupButton.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    popup.style.display = 'flex';
+});
+
+// Close popup when the "Back to game" button is clicked
+backToGameButton.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    popup.style.display = 'none';
+});
+
+// Close popup if user clicks outside the popup content
+window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+        popup.style.display = 'none';
+    }
+});

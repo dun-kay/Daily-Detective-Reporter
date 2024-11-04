@@ -1984,7 +1984,8 @@ label {
 .div-block-game {
   background-color: #333d73 !important;
   border-radius: 10px;
-  width: 360px !important;
+  max-width: 336px !important;
+  max-width: 360px !important;
   height: 750px;
   margin: 8px;
   display: block;

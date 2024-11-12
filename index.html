@@ -22,10 +22,23 @@
 </head>
 
 <body class="gbody">
-    <div data-w-id="19b68e02-0fe3-c84d-2e3b-07b6dc4789d2" class="gdiv">
+    <div id="GDiv" data-w-id="19b68e02-0fe3-c84d-2e3b-07b6dc4789d2" class="gdiv">
+        <script>
+  document.getElementById("showpop").addEventListener("click", function() {
+    // Show popup and hide main div
+    document.getElementById("GPopDiv").style.display = "block";
+    document.getElementById("GDiv").style.display = "none";
+  });
+
+  document.getElementById("showgame").addEventListener("click", function() {
+    // Hide popup and show main div
+    document.getElementById("GPopDiv").style.display = "none";
+    document.getElementById("GDiv").style.display = "block";
+  });
+</script>
         <div class="gdivinnersmall game bold-text">
                             <div class="g3col">
-                                <a href="https://mohowsitemockup.webflow.io/test-d24e-epoch" class="gbuttonblue epoch w-button">Epoch News</a><a data-w-id="b4f77517-bab5-359a-18fd-817fecf9e414" href="#" class="gbuttonblue w-button">Rules ?</a><a href="#" class="gbuttonblue multi w-button">Play friends</a>
+                                <a href="#" class="gbuttonblue epoch w-button">Play historic news version</a><a id="showpop" data-w-id="b4f77517-bab5-359a-18fd-817fecf9e414" href="#" class="gbuttonblue w-button">Rules ?</a><a href="" class="gbuttonblue multi w-button">Play friends</a>
                             </div>
                             <div class="g3col">
                                 <div class="titletext">Daily Detective Reporter</div>
@@ -686,7 +699,7 @@ function selectNextColumn() {
       }
     });
   });
-</script></div><div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script"><script>
+</script></div><div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div id="GPopDiv" class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script"><script>
   document.addEventListener("DOMContentLoaded", function() {
     // Get the button element by its ID
     const copyButton = document.getElementById('sharegamebutton');
@@ -703,7 +716,7 @@ function selectNextColumn() {
         });
     });
   });
-</script></div><a id="sharegamebutton" data-w-id="9db54890-a1f7-1225-607a-07ab603cff9e" href="#" class="gbuttonpurple w-button">Share today’s game ⤴️</a><a data-w-id="661c485f-2c6e-1e22-8010-daa0d0a1012a" href="#" class="gbuttonpurple link w-button">Link copied to clipboard!</a><div class="addiv"></div><div id="finalcountdown" class="textblue">Continue playing&nbsp;15</div></div></div></div><div data-w-id="b14ec7a4-1854-741f-5e13-0d09b37c8a2f" class="gdiv pop"><div class="gdivinnersmall"><div class="g3col"><a data-w-id="8adcb491-73c1-ec1d-8645-59dcf137ed76" href="#" class="gbuttonblue w-button">Back</a></div><div class="g3col"></div><div class="g3col"></div></div><div class="gpopdiv"><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Tap to select a clue</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Enter your guess</div></div><div class="g2col"><div class="textpurple">ENTR</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Correct letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Incorrect letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv yellow">B</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Example: TENSIONS</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">T</div><div id="1Clue3" class="cluetextdiv emoji">😬</div><div id="1Clue3" class="cluetextdiv emoji">🏹</div><div id="1Clue3" class="cluetextdiv">S</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">No guess limit</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv emoji">👍</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Use hints for help</div></div><div class="g2col"><div class="textblue">HINT</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Solve the headline</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">A</div><div id="1Clue3" class="cluetextdiv green">B</div><div id="1Clue3" class="cluetextdiv green">C</div><div id="1Clue3" class="cluetextdiv green">D</div></div></div></div></div>
+</script></div><a id="sharegamebutton" data-w-id="9db54890-a1f7-1225-607a-07ab603cff9e" href="#" class="gbuttonpurple w-button">Share today’s game ⤴️</a><a data-w-id="661c485f-2c6e-1e22-8010-daa0d0a1012a" href="#" class="gbuttonpurple link w-button">Link copied to clipboard!</a><div class="addiv"></div><div id="finalcountdown" class="textblue">Continue playing&nbsp;15</div></div></div></div><div data-w-id="b14ec7a4-1854-741f-5e13-0d09b37c8a2f" class="gdiv pop"><div class="gdivinnersmall"><div class="g3col"><a id="showgame" data-w-id="8adcb491-73c1-ec1d-8645-59dcf137ed76" href="#" class="gbuttonblue w-button">Back</a></div><div class="g3col"></div><div class="g3col"></div></div><div class="gpopdiv"><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Tap to select a clue</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Enter your guess</div></div><div class="g2col"><div class="textpurple">ENTR</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Correct letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Incorrect letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv yellow">B</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Example: TENSIONS</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">T</div><div id="1Clue3" class="cluetextdiv emoji">😬</div><div id="1Clue3" class="cluetextdiv emoji">🏹</div><div id="1Clue3" class="cluetextdiv">S</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">No guess limit</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv emoji">👍</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Use hints for help</div></div><div class="g2col"><div class="textblue">HINT</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Solve the headline</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">A</div><div id="1Clue3" class="cluetextdiv green">B</div><div id="1Clue3" class="cluetextdiv green">C</div><div id="1Clue3" class="cluetextdiv green">D</div></div></div></div></div>
 </body>
 
 </html>

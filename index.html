@@ -22,7 +22,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const mainGameDiv = document.getElementById("GDiv");
-  const popupDiv = document.getElementById("GPopDiv");
+  const popGDiv = document.getElementById("GPopDiv");
   const rulesButton = document.getElementById("showpop");
   const backButton = document.getElementById("showgame");
 
@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
   rulesButton.addEventListener("click", function(event) {
     event.preventDefault(); // Prevents the default link behavior
     mainGameDiv.style.display = "none"; // Hide the main game div
-    popupDiv.style.display = "block"; // Show the popup
+    popGDiv.style.display = "block"; // Show the popup
   });
 
   // Function to hide the popup and show the main game div
   backButton.addEventListener("click", function(event) {
     event.preventDefault(); // Prevents the default link behavior
-    popupDiv.style.display = "none"; // Hide the popup
+    popGDiv.style.display = "none"; // Hide the popup
     mainGameDiv.style.display = "block"; // Show the main game div
   });
 });

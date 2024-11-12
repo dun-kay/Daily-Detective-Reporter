@@ -200,7 +200,7 @@
             markGameAsPlayed();
             observer.disconnect();
             console.log("Game completion detected and marked as played.");
-            setTimeout(() => location.reload(), 10000);
+            setTimeout(() => location.reload(), 8000);
           }
         });
       });
@@ -655,7 +655,7 @@ function selectNextColumn() {
       const gameDate = document.getElementById('gamedate').textContent;
       document.getElementById('finalgamedate').textContent = `Game date: ${gameDate}`;
 
-      let countdown = 10;
+      let countdown = 8;
       const countdownDisplay = document.getElementById('finalcountdown');
       countdownDisplay.textContent = `Keep playing ${countdown}`;
       

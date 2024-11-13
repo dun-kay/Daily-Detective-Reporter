@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="59f07a3d-44ca-44cc-96ca-1a6f10d74093" data-blockingmode="auto" type="text/javascript"></script>
+     <!-- Cookiebot Script -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="59f07a3d-44ca-44cc-96ca-1a6f10d74093" data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- Custom CSS to Style Cookiebot Banner -->
+  <style>
+    /* Style the Cookiebot banner to fit better on mobile */
+    #CybotCookiebotDialog {
+      max-height: 50vh; /* Restrict to half the viewport height */
+      overflow-y: auto; /* Allow scrolling if content exceeds height */
+      max-width: 90%; /* Make sure it doesn’t span the full screen */
+      margin: auto; /* Center align on mobile */
+    }
+
+    #CybotCookiebotDialogBodyUnderlay,
+    #CybotCookiebotDialogBody {
+      text-transform: none !important; /* Disable all-caps styling */
+      padding: 20px; /* Add padding for readability */
+    }
+
+    #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection,
+    #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineallSelection {
+      text-transform: none !important; /* Ensure buttons aren't in all caps */
+    }
+
+    /* Ensure the styling adjusts for mobile view */
+    @media (max-width: 768px) {
+      #CybotCookiebotDialog {
+        max-width: 90%; /* Keep the width reasonable on mobile */
+        max-height: 50vh; /* Limit height to half of the viewport */
+        overflow-y: auto;
+      }
+      
+      #CybotCookiebotDialogBodyUnderlay,
+      #CybotCookiebotDialogBody {
+        padding: 20px; /* Additional padding for mobile readability */
+      }
+    }
+  </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Daily Detective Reporter</title>

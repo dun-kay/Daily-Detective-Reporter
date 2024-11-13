@@ -766,83 +766,92 @@ function selectNextColumn() {
   });
 </script>
 </div><a id="sharegamebutton" data-w-id="9db54890-a1f7-1225-607a-07ab603cff9e" class="gbuttonpurple w-button">Share today’s game ⤴️</a><a id="linkcollected" data-w-id="661c485f-2c6e-1e22-8010-daa0d0a1012a" class="gbuttonpurple link w-button">Link copied to clipboard!</a><div class="addiv"></div><div id="finalcountdown" class="textblue">Continue playing&nbsp;15</div></div></div></div><div id="GPopDiv" data-w-id="b14ec7a4-1854-741f-5e13-0d09b37c8a2f" class="gdiv pop"><div class="gdivinnersmall"><div class="g3col"><a id="showgame" data-w-id="8adcb491-73c1-ec1d-8645-59dcf137ed76" href="#" class="gbuttonblue w-button">Back</a></div><div class="g3col"></div><div class="g3col"></div></div><div class="gpopdiv"><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Tap to select a clue</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Enter your guess</div></div><div class="g2col"><div class="textpurple">ENTR</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Correct letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Incorrect letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv yellow">B</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Example: TENSIONS</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">T</div><div id="1Clue3" class="cluetextdiv emoji">😬</div><div id="1Clue3" class="cluetextdiv emoji">🏹</div><div id="1Clue3" class="cluetextdiv">S</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">No guess limit</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv emoji">👍</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Use hints for help</div></div><div class="g2col"><div class="textblue">HINT</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Solve the headline</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">A</div><div id="1Clue3" class="cluetextdiv green">B</div><div id="1Clue3" class="cluetextdiv green">C</div><div id="1Clue3" class="cluetextdiv green">D</div></div></div></div></div>
-</body>
-<!-- Cookie Banner HTML -->
-<div id="cookieBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background-color: #333d73; color: #ffffff; padding: 16px; font-size: 14px; z-index: 1000;">
-  <p style="margin: 0 0 8px 0; text-align: center;">
-    We use cookies to personalize content, provide social media features, and analyze our traffic. You can choose to accept only essential cookies or allow all.
-  </p>
-  
-  <!-- Consent Buttons -->
-  <div style="display: flex; justify-content: center; gap: 8px;">
-    <button id="acceptAllBtn" class="GButtonBlue">Accept All</button>
-    <button id="acceptEssentialBtn" class="GButtonBlue">Accept Essential Only</button>
-    <button id="settingsBtn" class="GButtonBlue">Settings</button>
-  </div>
-  
-  <!-- Consent Settings Modal (hidden by default) -->
-  <div id="cookieSettings" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background-color: #333d73; color: #ffffff; padding: 16px; font-size: 14px; z-index: 1001;">
-    <p style="margin: 0 0 8px 0; text-align: center;">Manage Cookie Preferences:</p>
-    <label><input type="checkbox" id="essentialCookies" checked disabled> Essential Cookies (required)</label><br>
-    <label><input type="checkbox" id="analyticsCookies"> Analytics Cookies</label><br>
-    <label><input type="checkbox" id="marketingCookies"> Marketing Cookies</label><br>
-    <button id="saveSettingsBtn" class="GButtonBlue" style="margin-top: 8px;">Save Preferences</button>
-  </div>
+<!-- Cookie Banner -->
+<div id="cookieBanner" style="display: none;">
+    <p>This website uses cookies to enhance your experience. By using this site, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+    <div class="button-container">
+        <button id="acceptAllCookies" class="GButtonBlue">Accept All</button>
+        <button id="acceptEssentialCookies" class="GButtonBlue">Accept Essential Only</button>
+        <button id="cookieSettings" class="GButtonBlue">Settings</button>
+    </div>
 </div>
 
-<!-- Cookie Banner JavaScript -->
+<!-- Cookie Settings Popup -->
+<div id="cookieSettingsPopup" style="display: none;">
+    <div class="settings-content">
+        <h2>Cookie Preferences</h2>
+        <p>Select the types of cookies you want to accept:</p>
+        <label><input type="checkbox" id="essentialCookies" checked disabled> Essential Cookies</label><br>
+        <label><input type="checkbox" id="analyticsCookies"> Analytics Cookies</label><br>
+        <label><input type="checkbox" id="marketingCookies"> Marketing Cookies</label><br>
+        <div class="button-container">
+            <button id="saveCookieSettings" class="GButtonBlue">Save Preferences</button>
+            <button id="closeCookieSettings" class="GButtonBlue">Close</button>
+        </div>
+    </div>
+</div>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Show banner if consent hasn't been set
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieBanner = document.getElementById("cookieBanner");
+    const cookieSettingsPopup = document.getElementById("cookieSettingsPopup");
+    const acceptAllButton = document.getElementById("acceptAllCookies");
+    const acceptEssentialButton = document.getElementById("acceptEssentialCookies");
+    const settingsButton = document.getElementById("cookieSettings");
+    const closeSettingsButton = document.getElementById("closeCookieSettings");
+    const saveSettingsButton = document.getElementById("saveCookieSettings");
+
+    // Check if consent has already been given
     if (!localStorage.getItem("cookieConsent")) {
-      document.getElementById("cookieBanner").style.display = "block";
+        cookieBanner.style.display = "block";
     }
 
-    // Functions to handle consent and save settings
-    function saveConsent(consent) {
-      localStorage.setItem("cookieConsent", JSON.stringify(consent));
-      applyConsent(consent);
-      document.getElementById("cookieBanner").style.display = "none";
+    // Accept all cookies
+    acceptAllButton.addEventListener("click", function() {
+        localStorage.setItem("cookieConsent", JSON.stringify({ essential: true, analytics: true, marketing: true }));
+        cookieBanner.style.display = "none";
+        applyConsentMode(true, true, true);
+    });
+
+    // Accept essential cookies only
+    acceptEssentialButton.addEventListener("click", function() {
+        localStorage.setItem("cookieConsent", JSON.stringify({ essential: true, analytics: false, marketing: false }));
+        cookieBanner.style.display = "none";
+        applyConsentMode(true, false, false);
+    });
+
+    // Open settings popup
+    settingsButton.addEventListener("click", function() {
+        cookieSettingsPopup.style.display = "block";
+    });
+
+    // Save preferences from settings
+    saveSettingsButton.addEventListener("click", function() {
+        const consent = {
+            essential: true,
+            analytics: document.getElementById("analyticsCookies").checked,
+            marketing: document.getElementById("marketingCookies").checked
+        };
+        localStorage.setItem("cookieConsent", JSON.stringify(consent));
+        cookieSettingsPopup.style.display = "none";
+        cookieBanner.style.display = "none";
+        applyConsentMode(consent.essential, consent.analytics, consent.marketing);
+    });
+
+    // Close settings popup without saving
+    closeSettingsButton.addEventListener("click", function() {
+        cookieSettingsPopup.style.display = "none";
+    });
+
+    // Function to apply consent mode based on preferences
+    function applyConsentMode(essential, analytics, marketing) {
+        if (window.gtag) {
+            gtag('consent', 'update', {
+                'analytics_storage': analytics ? 'granted' : 'denied',
+                'ad_storage': marketing ? 'granted' : 'denied'
+            });
+        }
     }
-
-    function applyConsent(consent) {
-      if (consent.analytics) {
-        // Enable analytics cookies (e.g., Google Analytics)
-        console.log("Analytics enabled");
-      }
-      if (consent.marketing) {
-        // Enable marketing cookies
-        console.log("Marketing enabled");
-      }
-    }
-
-    // Accept All Button
-    document.getElementById("acceptAllBtn").addEventListener("click", function() {
-      saveConsent({ essential: true, analytics: true, marketing: true });
-    });
-
-    // Accept Essential Only Button
-    document.getElementById("acceptEssentialBtn").addEventListener("click", function() {
-      saveConsent({ essential: true, analytics: false, marketing: false });
-    });
-
-    // Settings Button - Show Settings Modal
-    document.getElementById("settingsBtn").addEventListener("click", function() {
-      document.getElementById("cookieSettings").style.display = "block";
-      document.getElementById("cookieBanner").style.display = "none";
-    });
-
-    // Save Settings Button in Modal
-    document.getElementById("saveSettingsBtn").addEventListener("click", function() {
-      const consent = {
-        essential: true,
-        analytics: document.getElementById("analyticsCookies").checked,
-        marketing: document.getElementById("marketingCookies").checked
-      };
-      saveConsent(consent);
-      document.getElementById("cookieSettings").style.display = "none";
-    });
-  });
+});
 </script>
-
+</body>
 </html>

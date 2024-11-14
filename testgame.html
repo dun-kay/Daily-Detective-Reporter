@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+    <title>Test Daily Detective Reporter</title>
+    
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    
+    </script>
+    
+    <link href="ddrfavicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="ddrfavicon (1).png" rel="apple-touch-icon">
+
+</head>
+
+<body class="gbody">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6HMN7VJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="GDiv" data-w-id="19b68e02-0fe3-c84d-2e3b-07b6dc4789d2" class="gdiv">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const mainGameDiv = document.getElementById("GDiv");
+  const popGDiv = document.getElementById("GPopDiv");
+  const rulesButton = document.getElementById("showpop");
+  const backButton = document.getElementById("showgame");
+
+  // Function to show the popup and hide the main game div
+  rulesButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the default link behavior
+    mainGameDiv.style.display = "none"; // Hide the main game div
+    popGDiv.style.display = "block"; // Show the popup
+  });
+
+  // Function to hide the popup and show the main game div
+  backButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the default link behavior
+    popGDiv.style.display = "none"; // Hide the popup
+    mainGameDiv.style.display = "block"; // Show the main game div
+  });
+});
+</script>
+        <div class="gdivinnersmall game bold-text">
+                            <div class="g3col">
+                                <a href="#" class="gbuttonblue epoch w-button">Play historic news version</a><a id="showpop" data-w-id="b4f77517-bab5-359a-18fd-817fecf9e414" href="#" class="gbuttonblue w-button">Rules ?</a>
+                            </div>
+                            <div class="g3col">
+                                <div class="titletext">Daily Detective Reporter</div>
+                            </div>
+                            <div class="g3col">
+                                <div id="gamedate" class="textblue">11 Nov 2024</div>
+                                <div id="guesscount" class="textpurple">Guess: 0</div>
+                            </div>
+        </div>
+    <div class="gdivinnerbig">
+        <div id="Col1" class="g5col">
+            <div class="divcluegrid">
+                <div class="cluetextdiv" id="1Clue1">⏳</div>
+                <div class="cluetextdiv" id="2Clue1">⏳</div>
+                <div class="cluetextdiv" id="3Clue1">🔁</div>
+                <div class="cluetextdiv" id="4Clue1">🔁</div>
+            </div>
+            <div class="letterdivblank" id="l1.1"></div>
+            <div class="letterdivblank" id="l1.2"></div>
+            <div class="letterdivblank" id="l1.3"></div>
+            <div class="letterdivblank" id="l1.4"></div>
+            <div class="letterdivblank" id="l1.5"></div>
+        </div>
+        <div id="Col2" class="g5col"><div class="divcluegrid"><div class="cluetextdiv" id="1Clue2">⏳</div><div class="cluetextdiv" id="2Clue2">⏳</div><div class="cluetextdiv" id="3Clue2">🔁</div><div class="cluetextdiv" id="4Clue2">🔁</div></div><div class="letterdivblank" id="l2.1"></div><div class="letterdivblank" id="l2.2"></div><div class="letterdivblank" id="l2.3"></div><div class="letterdivblank" id="l2.4"></div><div class="letterdivblank" id="l2.5"></div></div><div id="Col3" class="g5col"><div class="divcluegrid"><div class="cluetextdiv" id="1Clue3">⏳</div><div class="cluetextdiv" id="2Clue3">⏳</div><div class="cluetextdiv" id="3Clue3">🔁</div><div class="cluetextdiv" id="4Clue3">🔁</div></div><div class="letterdivblank" id="l3.1"></div><div class="letterdivblank" id="l3.2"></div><div class="letterdivblank" id="l3.3"></div><div class="letterdivblank" id="l3.4"></div><div class="letterdivblank" id="l3.5"></div></div><div id="Col4" class="g5col"><div class="divcluegrid"><div class="cluetextdiv" id="1Clue4">⏳</div><div class="cluetextdiv" id="2Clue4">⏳</div><div class="cluetextdiv" id="3Clue4">🔁</div><div class="cluetextdiv" id="4Clue4">🔁</div></div><div class="letterdivblank" id="l4.1"></div><div class="letterdivblank" id="l4.2"></div><div class="letterdivblank" id="l4.3"></div><div class="letterdivblank" id="l4.4"></div><div class="letterdivblank" id="l4.5"></div></div>
+        <div id="Col5" class="g5col">
+            <div class="divcluegrid">
+                <div class="cluetextdiv" id="1Clue5">⏳</div>
+                <div class="cluetextdiv" id="2Clue5">⏳</div>
+                <div class="cluetextdiv" id="3Clue5">🔁</div>
+                <div class="cluetextdiv" id="4Clue5">🔁</div>
+            </div>
+            <div class="letterdivblank" id="l5.1"></div>
+            <div class="letterdivblank" id="l5.2"></div>
+            <div class="letterdivblank" id="l5.3"></div>
+            <div class="letterdivblank" id="l5.4"></div>
+            <div class="letterdivblank" id="l5.5"></div>
+        </div>
+    </div>
+    <div class="gdivinnersmall">
+        <div class="g1col">
+            <div class="divkeyboardrow">
+                <div id="1Clue1" class="divkey w-node-_1d610d54-b787-deeb-7be6-7b05876ab87a-b99e5b73">Q</div><div id="1Clue1" class="divkey w-node-de9dd6d8-d202-c1d2-4c93-2ea3dbba76fa-b99e5b73">W</div><div id="1Clue1" class="divkey w-node-_2e0d99c3-2658-536d-43a2-f289669a7e58-b99e5b73">E</div><div id="1Clue1" class="divkey w-node-_2da935ea-e913-7c93-7aa1-fbbd9ba0d4a2-b99e5b73">R</div><div id="1Clue1" class="divkey w-node-f918fa86-3255-5d90-3ddb-a20b39be98a5-b99e5b73">T</div><div id="1Clue1" class="divkey w-node-_95052a8b-16ec-a438-4584-7ddad6edd72c-b99e5b73">Y</div><div id="1Clue1" class="divkey w-node-e331eb96-6b5c-6a6b-60c2-5d3fcbfd450d-b99e5b73">U</div><div id="1Clue1" class="divkey w-node-_2256d16f-17bf-2eac-8faa-d5907616983f-b99e5b73">I</div><div id="1Clue1" class="divkey w-node-cd840af6-21d1-5732-4d31-43cb9d4ce845-b99e5b73">O</div><div id="1Clue1" class="divkey w-node-b826cc7a-2fc7-50e8-f806-f0c41124639c-b99e5b73">P</div></div><div class="divkeyboardrow"><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094d2-b99e5b73">A</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094d4-b99e5b73">S</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094d6-b99e5b73">D</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094d8-b99e5b73">F</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094da-b99e5b73">G</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094dc-b99e5b73">H</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094de-b99e5b73">J</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094e0-b99e5b73">K</div><div id="1Clue1" class="divkey w-node-_0decf0ec-614a-5093-eda2-7b07816094e2-b99e5b73">L</div><div id="1Clue1" class="divkey bks w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fd6-b99e5b73">⌫</div></div><div class="divkeyboardrow"><div id="hintbutton" class="divkey enter hint w-node-_6964ac13-7581-2edf-daf1-0390a113e178-b99e5b73">HINT</div><div id="1Clue1" class="divkey w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fc8-b99e5b73">Z</div><div id="1Clue1" class="divkey w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fca-b99e5b73">X</div><div id="1Clue1" class="divkey w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fcc-b99e5b73">C</div><div id="1Clue1" class="divkey w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fce-b99e5b73">V</div><div id="1Clue1" class="divkey w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fd0-b99e5b73">B</div><div id="1Clue1" class="divkey w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fd2-b99e5b73">N</div><div id="1Clue1" class="divkey w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fd4-b99e5b73">M</div><div id="1Clue1" class="divkey enter w-node-_6f5138c5-7eff-52ec-1943-c01c45e92fc6-b99e5b73">ENTR</div></div></div></div><div id="1Clue1" onclick="window.open('https://x.com/DKay6_37', '_blank');" role="button" tabindex="0" class="divkey enter makersmark w-node-c9376858-eb05-89d4-4982-bdea4c6d2f5c-b99e5b73">A GAME BY D. KAY</div>
+      <div id="loadingjava" class="divcode w-embed w-script">
+                    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const currentDate = new Date().toISOString().split('T')[0];
+    let playedGames = JSON.parse(localStorage.getItem("playedGames")) || [];
+    const games = [
+    {
+      "date": "2024-11-04",
+      "gameDateFormatted": "4 Nov 2024",
+      "words": [
+        { "word": "HECKLED", "clues": ["H", "E", "C", "📣"] },
+        { "word": "ROYALS", "clues": ["👑", "A", "L", "S"] },
+        { "word": "FACE", "clues": ["F", "😳", "🧍", "E"] },
+        { "word": "FLOOD", "clues": ["F", "🌧️", "💧", "D"] },
+        { "word": "ANGER", "clues": ["A", "N", "G", "😠"] }
+      ],
+      "firstHintLetter": "A",
+      "thirdHintLetter": "E"
+    },
+    {
+      "date": "2024-11-05",
+      "gameDateFormatted": "5 Nov 2024",
+      "words": [
+        { "word": "GERMAN", "clues": ["🇩🇪", "M", "A", "N"] },
+        { "word": "GOVERNMENT", "clues": ["G", "🏛️", "💼", "T"] },
+        { "word": "COLLAPSE", "clues": ["C", "O", "L", "💥"] },
+        { "word": "LOOKING", "clues": ["L", "🧐", "🔍", "G"] },
+        { "word": "LIKELY", "clues": ["L", "I", "K", "✔️"] }
+      ],
+      "firstHintLetter": "E",
+      "thirdHintLetter": "A"
+    },
+    {
+      "date": "2024-11-06",
+      "gameDateFormatted": "6 Nov 2024",
+      "words": [
+        { "word": "TRUMP", "clues": ["T", "👱‍♂️", "🍊", "P"] },
+        { "word": "WINS", "clues": ["W", "🏆", "🎉", "S"] },
+        { "word": "ELECTION", "clues": ["🗳️", "I", "O", "N"] },
+        { "word": "DECISIVELY", "clues": ["D", "E", "C", "👏"] },
+        { "word": "AGAIN", "clues": ["A", "🔁", "➿", "N"] }
+      ],
+      "firstHintLetter": "E",
+      "thirdHintLetter": "I"
+    },
+    {
+      "date": "2024-11-07",
+      "gameDateFormatted": "7 Nov 2024",
+      "words": [
+        { "word": "CLIMATE", "clues": ["C", "🌍", "🌡️", "E"] },
+        { "word": "CONFERENCE", "clues": ["C", "O", "N", "🗣️"] },
+        { "word": "OIL", "clues": ["O", "🦕", "🛢", "⛽"] },
+        { "word": "DEAL", "clues": ["D", "🤝", "💰", "L"] },
+        { "word": "PLAYGROUND", "clues": ["P", "L", "A", "🛝"] }
+      ],
+      "firstHintLetter": "E",
+      "thirdHintLetter": "A"
+    },
+    {
+      "date": "2024-11-08",
+      "gameDateFormatted": "8 Nov 2024",
+      "words": [
+        { "word": "AMSTERDAM", "clues": ["🇳🇱", "D", "A", "M"] },
+        { "word": "RIOT", "clues": ["R", "🔥", "🚓", "T"] },
+        { "word": "TARGETS", "clues": ["T", "A", "R", "🎯"] },
+        { "word": "ISRAELI", "clues": ["🇮🇱", "E", "L", "I"] },
+        { "word": "FANS", "clues": ["F", "🎉", "👥", "S"] }
+      ],
+      "firstHintLetter": "T",
+      "thirdHintLetter": "A"
+    },
+    {
+      "date": "2024-11-09",
+      "gameDateFormatted": "9 Nov 2024",
+      "words": [
+        { "word": "PAKISTAN", "clues": ["P", "A", "K", "🇵🇰"] },
+        { "word": "STATION", "clues": ["🚉", "I", "O", "N"] },
+        { "word": "BOMBING", "clues": ["B", "💥", "🚨", "G"] },
+        { "word": "KILLS", "clues": ["K", "I", "💀", "S"] },
+        { "word": "DOZENS", "clues": ["D", "🔢", "N", "S"] }
+      ],
+      "firstHintLetter": "I",
+      "thirdHintLetter": "A"
+    },
+    {
+      "date": "2024-11-10",
+      "gameDateFormatted": "10 Nov 2024",
+      "words": [
+        { "word": "MILESTONE", "clues": ["M", "🪨", "🧱", "E"] },
+        { "word": "CLOSE", "clues": ["C", "L", "O", "⏭"] },
+        { "word": "BITCOIN", "clues": ["B", "I", "T", "🪙"] },
+        { "word": "PRICE", "clues": ["P", "📊", "💲", "E"] },
+        { "word": "RECORD", "clues": ["R", "🔝", "📈", "D"] }
+      ],
+      "firstHintLetter": "I",
+      "thirdHintLetter": "E"
+    },
+    {
+      "date": "2024-11-11",
+      "gameDateFormatted": "11 Nov 2024",
+      "words": [
+        { "word": "HAITI", "clues": ["🇭🇹", "I", "T", "I"] },
+        { "word": "LEADER", "clues": ["L", "🏛️", "⚖️", "R"] },
+        { "word": "FIRED", "clues": ["F", "💼", "🔥", "D"] },
+        {  "word": "VIOLENCE", "clues": ["V", "⚔️", "💪", "E"] },
+        { "word": "INTENSIFIES", "clues": ["I", "N", "T", "⬆️"] }
+      ],
+      "firstHintLetter": "E",
+      "thirdHintLetter": "I"
+    },
+    {
+      "date": "2024-11-12",
+      "gameDateFormatted": "12 Nov 2024",
+      "words": [
+        { "word": "CAR", "clues": ["🏎", "🚗", "🛻", "R"] },
+        { "word": "STRIKES", "clues": ["S", "⚡️", "💥", "S"] },
+        { "word": "SOUTH", "clues": ["🧭", "⬇️", "T", "H"] },
+        {  "word": "CHINA", "clues": ["🇨🇳", "I", "N", "A"] },
+        { "word": "CROWD", "clues": ["C", "🧑‍🤝‍🧑", "🏟", "D"] }
+      ],
+      "firstHintLetter": "I",
+      "thirdHintLetter": "R"
+    },
+    {
+      "date": "2024-11-13",
+      "gameDateFormatted": "13 Nov 2024",
+      "words": [
+        { "word": "ESCAPED", "clues": ["E", "🏃", "🚓", "D"] },
+        { "word": "RUSSIAN", "clues": ["🪆", "I", "A", "N"] },
+        { "word": "WHALE", "clues": ["W", "🐋", "🐳", "E"] },
+        {  "word": "NOT", "clues": ["🙅", "❎", "🛑", "T"] },
+        { "word": "SPY", "clues": ["S", "🕵", "🔫", "🪖"] }
+      ],
+      "firstHintLetter": "E",
+      "thirdHintLetter": "A"
+    },
+    {
+      "date": "2024-11-14",
+      "gameDateFormatted": "14 Nov 2024",
+      "words": [
+        { "word": "TRUMP", "clues": ["👱", "U", "M", "P"] },
+        { "word": "TAKES", "clues": ["T", "🏃", "✊", "S"] },
+        { "word": "FULL", "clues": ["F", "🌕", "💯", "🚰"] },
+        {  "word": "CONGRESS", "clues": ["🏛", "N", "R", "S"] },
+        { "word": "CONTROL", "clues": ["C", "🎮", "🛂", "L"] }
+      ],
+      "firstHintLetter": "O",
+      "thirdHintLetter": "N"
+    }
+  ];
+
+    let currentGameDate = null;
+
+    function setupCompletionObserver() {
+      const gDivFin = document.querySelector('.gdiv.fin');
+      if (!gDivFin) return;
+
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.target.style.display === 'block') {
+            markGameAsPlayed();
+            observer.disconnect();
+            console.log("Game completion detected and marked as played.");
+            setTimeout(() => location.reload(), 8000);
+          }
+        });
+      });
+
+      observer.observe(gDivFin, { attributes: true, attributeFilter: ['style'] });
+    }
+
+    function markGameAsPlayed() {
+      if (currentGameDate && !playedGames.includes(currentGameDate)) {
+        playedGames.push(currentGameDate);
+        localStorage.setItem("playedGames", JSON.stringify(playedGames));
+        console.log("Game marked as played:", currentGameDate);
+      } else {
+        console.log("Game was already marked as played:", currentGameDate);
+      }
+
+      const storedGames = JSON.parse(localStorage.getItem("playedGames")) || [];
+      if (storedGames.includes(currentGameDate)) {
+        console.log("Verification successful: Game for", currentGameDate, "is in local storage.");
+      } else {
+        console.log("Verification failed: Game for", currentGameDate, "is not in local storage.");
+      }
+    }
+
+function loadNextGame() {
+  console.log("Current Date:", currentDate);
+  console.log("Played Games List:", playedGames);
+
+  // Check if today's game is unplayed
+  let todayGame = games.find(game => game.date === currentDate && !playedGames.includes(game.date));
+
+  if (todayGame) {
+    console.log("Loading today's game:", todayGame.date);
+    displayGame(todayGame); // Display today’s game if unplayed
+  } else {
+    // If today’s game has been played, find the most recent unplayed game
+    const nextMostRecentUnplayedGame = games
+      .filter(game => !playedGames.includes(game.date) && new Date(game.date) < new Date(currentDate))
+      .sort((a, b) => new Date(b.date) - new Date(a.date))[0]; // Sort in descending date order and take the newest unplayed game
+
+    if (nextMostRecentUnplayedGame) {
+      console.log("Loading next most recent unplayed game:", nextMostRecentUnplayedGame.date);
+      displayGame(nextMostRecentUnplayedGame);
+    } else {
+      console.log("All games have been played!");
+      showNoMoreGamesPopup(); // Show message when no more unplayed games are available
+    }
+  }
+}
+
+
+function showNoMoreGamesPopup() {
+  // Check if a popup already exists
+  let popup = document.getElementById('no-more-games-popup');
+  if (!popup) {
+    // Create the popup div
+    popup = document.createElement('div');
+    popup.id = 'no-more-games-popup';
+    popup.className = 'textpurple';
+    popup.style.position = 'fixed';
+    popup.style.top = '50%';
+    popup.style.left = '50%';
+    popup.style.transform = 'translate(-50%, -50%)';
+    popup.style.backgroundColor = '#333d73';
+    popup.style.padding = '20px';
+    popup.style.borderRadius = '5px';
+    popup.style.textAlign = 'center';
+    popup.style.color = 'white';
+    popup.style.fontFamily = 'Arial, sans-serif';
+    popup.style.fontSize = '16px';
+    popup.style.fontWeight = 'bold';
+    popup.style.zIndex = '1000';
+    popup.style.maxWidth = '80%';
+    popup.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.3)';
+
+    // Set the popup content
+    popup.textContent = "You have played all available daily games. Come back tomorrow to play again!";
+
+    // Append the popup to the document body
+    document.body.appendChild(popup);
+  }
+
+  // Display the popup
+  popup.style.display = 'block';
+
+  // Auto-hide the popup after 5 seconds
+  setTimeout(() => {
+    popup.style.display = 'none';
+  }, 5000);
+}
+
+
+
+    function displayGame(game) {
+      if (!game || !game.words || !Array.isArray(game.words)) {
+        console.error("Error: Invalid game object or missing 'words' property:", game);
+        return;
+      }
+
+      currentGameDate = game.date;
+      console.log("Displaying Game:", currentGameDate);
+      const gameDateElement = document.getElementById("gamedate");
+      if (gameDateElement) {
+        gameDateElement.textContent = game.gameDateFormatted;
+      }
+
+      window.currentGame = game; // Set current game globally for later use
+
+      game.words.forEach((wordObj, index) => {
+        const columnNumber = index + 1;
+        const columnElement = document.getElementById(`Col${columnNumber}`);
+        if (columnElement) {
+          columnElement.innerHTML = "";
+
+          const clueContainer = document.createElement("div");
+          clueContainer.classList.add("divcluegrid");
+
+          if (Array.isArray(wordObj.clues)) {
+            wordObj.clues.forEach((clue, clueIndex) => {
+              const clueDiv = document.createElement("div");
+              clueDiv.classList.add("cluetextdiv");
+              clueDiv.setAttribute("id", `${clueIndex + 1}Clue${columnNumber}`);
+              clueDiv.textContent = clue;
+              clueContainer.appendChild(clueDiv);
+            });
+          }
+
+          columnElement.appendChild(clueContainer);
+
+          if (typeof wordObj.word === "string") {
+            for (let i = 0; i < wordObj.word.length; i++) {
+              const letterDiv = document.createElement("div");
+              letterDiv.classList.add("letterdivblank");
+              letterDiv.setAttribute("id", `l${columnNumber}.${i + 1}`);
+              columnElement.appendChild(letterDiv);
+            }
+          }
+        }
+      });
+
+      setupHints(game.firstHintLetter, game.thirdHintLetter);
+    }
+
+    function setupHints(firstHint, thirdHint) {
+      window.firstHintLetter = firstHint;
+      window.thirdHintLetter = thirdHint;
+    }
+
+    loadNextGame();
+    setupCompletionObserver();
+
+    // SECOND PART - ADDED AFTER ENSURING window.currentGame IS DEFINED
+    let currentSelectedColumn = null;
+    let guessCount = 0;
+    let hintCount = 0;
+    const maxHints = 3;
+
+    // Check if currentGame is loaded before accessing properties
+    if (window.currentGame && Array.isArray(window.currentGame.words)) {
+      const answers = {};
+      window.currentGame.words.forEach((wordObj, index) => {
+        answers[`Col${index + 1}`] = wordObj.word;
+      });
+
+      const finalHeadline = window.currentGame.words.map(wordObj => wordObj.word).join(" ");
+      const firstHintLetter = window.currentGame.firstHintLetter;
+      const thirdHintLetter = window.currentGame.thirdHintLetter;
+
+      // Remaining functions and logic go here for gameplay...
+      // e.g., updateGuessCounter, selectColumn, insertLetter, etc.
+    } else {
+      console.error("Error: currentGame is undefined or does not have 'words' array.");
+    }
+  });
+ document.addEventListener("DOMContentLoaded", function() {
+    let currentSelectedColumn = null;
+    let guessCount = 0;
+    let hintCount = 0;
+    const maxHints = 3;
+    const currentGame = window.currentGame;
+    const answers = {};
+
+    currentGame.words.forEach((wordObj, index) => {
+      answers[`Col${index + 1}`] = wordObj.word;
+    });
+
+    const finalHeadline = currentGame.words.map(wordObj => wordObj.word).join(" ");
+    const firstHintLetter = currentGame.firstHintLetter;
+    const thirdHintLetter = currentGame.thirdHintLetter;
+
+    function updateGuessCounter(isCorrect) {
+      guessCount += 1;
+      const guessCounter = document.getElementById('guesscount');
+      guessCounter.textContent = `Guess: ${guessCount}`;
+      guessCounter.style.backgroundColor = isCorrect ? '#2da701' : '#c95700';
+
+      setTimeout(() => {
+        guessCounter.style.backgroundColor = '';
+      }, 1000);
+    }
+
+    function selectColumn(columnId) {
+      const selectedColumn = document.getElementById(columnId);
+      if (selectedColumn && selectedColumn.dataset.correct === "true") return;
+
+      document.querySelectorAll('.letterdivblank').forEach(div => {
+        if (div.dataset.correct !== "true") div.style.backgroundColor = '#414e96';
+      });
+
+      if (selectedColumn) {
+        selectedColumn.querySelectorAll('.letterdivblank').forEach(div => {
+          if (div.dataset.correct !== "true") div.style.backgroundColor = '#b392de';
+        });
+      }
+      currentSelectedColumn = columnId;
+    }
+
+    function insertLetter(letter) {
+      if (!currentSelectedColumn) selectColumn('Col1');
+      const selectedColumn = document.getElementById(currentSelectedColumn);
+      const blanks = Array.from(selectedColumn.querySelectorAll('.letterdivblank'));
+
+      for (let blank of blanks) {
+        if (!blank.textContent.trim()) {
+          blank.textContent = letter;
+          break;
+        }
+      }
+    }
+
+    function backspace() {
+      if (!currentSelectedColumn) return;
+      const selectedColumn = document.getElementById(currentSelectedColumn);
+      const blanks = Array.from(selectedColumn.querySelectorAll('.letterdivblank')).reverse();
+
+      for (let blank of blanks) {
+        if (blank.textContent.trim() && blank.dataset.correct !== "true") {
+          blank.textContent = '';
+          break;
+        }
+      }
+    }
+
+    function isColumnFilled() {
+      if (!currentSelectedColumn) return false;
+      const selectedColumn = document.getElementById(currentSelectedColumn);
+      return Array.from(selectedColumn.querySelectorAll('.letterdivblank')).every(div => div.textContent.trim() !== "");
+    }
+
+    function showPopup(message) {
+      let popup = document.getElementById('result-popup');
+      if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'result-popup';
+        popup.className = 'textpurple';
+        popup.style.position = 'fixed';
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.backgroundColor = '#333d73';
+        popup.style.padding = '8px';
+        popup.style.borderRadius = '5px';
+        popup.style.textAlign = 'center';
+        popup.style.color = 'white';
+        popup.style.fontFamily = 'Arial, sans-serif';
+        popup.style.fontSize = '14px';
+        popup.style.fontWeight = 'bold';
+        document.body.appendChild(popup);
+      }
+      popup.textContent = message;
+      popup.style.display = 'block';
+
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 1000);
+    }
+
+    function useHint() {
+      if (hintCount >= maxHints) {
+        showPopup("NO HINTS LEFT");
+        return;
+      }
+
+      hintCount += 1;
+      const hintActions = [
+        () => fillLetterHints(firstHintLetter),
+        fillEdgeLetters,
+        () => fillLetterHints(thirdHintLetter)
+      ];
+
+      hintActions[hintCount - 1]();
+    }
+
+    function fillLetterHints(letter) {
+      Object.keys(answers).forEach(colId => {
+        const selectedColumn = document.getElementById(colId);
+        const blanks = Array.from(selectedColumn.querySelectorAll('.letterdivblank'));
+        const answer = answers[colId];
+
+        blanks.forEach((blank, index) => {
+          if (answer[index] === letter && blank && !blank.textContent.trim()) {
+            blank.textContent = letter;
+            blank.style.backgroundColor = '#2da701';
+            blank.dataset.correct = "true";
+          }
+        });
+      });
+    }
+
+    function fillEdgeLetters() {
+      Object.keys(answers).forEach(colId => {
+        const selectedColumn = document.getElementById(colId);
+        const blanks = Array.from(selectedColumn.querySelectorAll('.letterdivblank'));
+        const answer = answers[colId];
+
+        if (blanks[0] && !blanks[0].textContent.trim()) {
+          blanks[0].textContent = answer[0];
+          blanks[0].style.backgroundColor = '#2da701';
+          blanks[0].dataset.correct = "true";
+        }
+
+        const lastIndex = answer.length - 1;
+        if (blanks[lastIndex] && !blanks[lastIndex].textContent.trim()) {
+          blanks[lastIndex].textContent = answer[lastIndex];
+          blanks[lastIndex].style.backgroundColor = '#2da701';
+          blanks[lastIndex].dataset.correct = "true";
+        }
+      });
+    }
+
+    function validateGuess() {
+      if (!isColumnFilled()) {
+        showPopup("NOT ENOUGH LETTERS");
+        return;
+      }
+
+      const selectedColumn = document.getElementById(currentSelectedColumn);
+      const guess = Array.from(selectedColumn.querySelectorAll('.letterdivblank')).map(div => div.textContent.trim()).join("");
+      const correctAnswer = answers[currentSelectedColumn];
+
+      if (correctAnswer) {
+        let isCorrect = true;
+
+        setTimeout(() => {
+          Array.from(selectedColumn.querySelectorAll('.letterdivblank')).forEach((div, index) => {
+            if (guess[index] === correctAnswer[index]) {
+              div.style.backgroundColor = '#2da701';
+              div.dataset.correct = "true";
+            } else {
+              isCorrect = false;
+              div.style.backgroundColor = '#c95700';
+              setTimeout(() => {
+                div.style.backgroundColor = currentSelectedColumn === selectedColumn.id ? '#b392de' : '#414e96';
+                div.textContent = '';
+              }, 1500);
+            }
+          });
+
+          if (isCorrect) {
+            selectedColumn.dataset.correct = "true";
+            updateGuessCounter(true);
+            revealCorrectClues(currentSelectedColumn);
+            if (isAllColumnsCorrect()) {
+              showFinalPopup();
+            } else {
+              selectNextColumn();
+            }
+          } else {
+            updateGuessCounter(false);
+          }
+        }, 200);
+      }
+    }
+
+    function revealCorrectClues(columnId) {
+      const selectedColumn = document.getElementById(columnId);
+      const clueDivs = Array.from(selectedColumn.querySelectorAll('.cluetextdiv'));
+
+      clueDivs.forEach((div, index) => {
+        setTimeout(() => {
+          div.style.backgroundColor = '#2da701';
+        }, index * 200);
+      });
+    }
+
+    function isAllColumnsCorrect() {
+      return Object.keys(answers).every(colId => {
+        const selectedColumn = document.getElementById(colId);
+        return Array.from(selectedColumn.querySelectorAll('.letterdivblank')).every(div => div.dataset.correct === "true");
+      });
+    }
+
+function selectNextColumn() {
+  // Iterate over all columns to find the next incomplete or incorrect one
+  for (let i = 1; i <= 5; i++) {
+    const columnId = `Col${i}`;
+    const columnElement = document.getElementById(columnId);
+
+    if (columnElement && columnElement.dataset.correct !== "true") {
+      // Check if this column has any blank or incorrect letters
+      const blanks = Array.from(columnElement.querySelectorAll('.letterdivblank'));
+      const isIncomplete = blanks.some(div => !div.textContent.trim() || div.dataset.correct !== "true");
+
+      if (isIncomplete) {
+        setTimeout(() => {
+          selectColumn(columnId); // Select the first incomplete column found
+        }, 1000);
+        return;
+      }
+    }
+  }
+}
+
+
+    function showFinalPopup() {
+      let popup = document.getElementById('result-popup');
+      if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'result-popup';
+        popup.className = 'textpurple';
+        popup.style.position = 'fixed';
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.backgroundColor = '#333d73';
+        popup.style.padding = '8px';
+        popup.style.borderRadius = '5px';
+        popup.style.textAlign = 'center';
+        popup.style.color = 'white';
+        popup.style.fontFamily = 'Arial, sans-serif';
+        popup.style.fontSize = '14px';
+        popup.style.fontWeight = 'bold';
+        document.body.appendChild(popup);
+      }
+
+      popup.textContent = "YOU SOLVED IT! 🎊🎊";
+      popup.style.display = 'block';
+
+      setTimeout(() => {
+        popup.style.display = 'none';
+        document.querySelector('.gdiv').style.display = 'none';
+        document.querySelector('.gdiv.fin').style.display = 'block';
+        displayFinalResults();
+      }, 2000);
+    }
+
+    function displayFinalResults() {
+      document.getElementById('finalguesscount').textContent = `Guesses: ${guessCount}`;
+      document.getElementById('finalhintcount').textContent = `Hints: ${Math.min(hintCount, 3)}`;
+      document.getElementById('finalheadline').textContent = `YOU SOLVED IT! ${finalHeadline}`;
+
+      const gameDate = document.getElementById('gamedate').textContent;
+      document.getElementById('finalgamedate').textContent = `Game date: ${gameDate}`;
+
+      let countdown = 8;
+      const countdownDisplay = document.getElementById('finalcountdown');
+      countdownDisplay.textContent = `Keep playing ${countdown}`;
+
+      const countdownInterval = setInterval(() => {
+        countdown -= 1;
+        countdownDisplay.textContent = `Keep playing ${countdown}`;
+        if (countdown === 0) {
+          clearInterval(countdownInterval);
+          location.reload();
+        }
+      }, 1000);
+    }
+
+    document.getElementById('hintbutton').addEventListener('click', useHint);
+
+    document.querySelectorAll('.divkey').forEach(key => {
+      key.addEventListener('click', function() {
+        const keyText = key.textContent.trim();
+        if (keyText.length === 1 && /^[A-Z]$/i.test(keyText)) {
+          insertLetter(keyText);
+        }
+        if (keyText === '⌫') {
+          backspace();
+        }
+        if (keyText === 'ENTR') {
+          validateGuess();
+        }
+      });
+    });
+
+    ['Col1', 'Col2', 'Col3', 'Col4', 'Col5'].forEach(colId => {
+      const column = document.getElementById(colId);
+      if (column) {
+        column.addEventListener('click', function() {
+          selectColumn(colId);
+        });
+      }
+    });
+  });
+</script></div><div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const copyButton = document.getElementById('sharegamebutton');
+    const linkCollected = document.getElementById('linkcollected');
+
+    // Check if elements exist
+    if (copyButton && linkCollected) {
+      copyButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default action of <a> tag
+
+        // Copy the current page URL to the clipboard
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => {
+            console.log('URL copied to clipboard');
+
+            // Hide the share button and show the confirmation message
+            copyButton.style.display = 'none';
+            linkCollected.style.display = 'block';
+
+            // Set a timeout to reverse the visibility after 1 second
+            setTimeout(() => {
+              copyButton.style.display = 'inline-block';
+              linkCollected.style.display = 'none';
+            }, 1000);
+          })
+          .catch(err => {
+            console.error('Failed to copy URL: ', err);
+          });
+      });
+    } else {
+      console.error('Button or confirmation div not found');
+    }
+  });
+</script>
+</div>
+  
+  <div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const copyButton = document.getElementById('sharegamebutton');
+    const linkCollected = document.getElementById('linkcollected');
+    
+    // Check if elements exist
+    if (copyButton && linkCollected) {
+      copyButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default action of <a> tag
+
+        // Copy the current page URL to the clipboard
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => {
+            console.log('URL copied to clipboard');
+            
+            // Hide the share button and show the confirmation message
+            copyButton.style.display = 'none';
+            linkCollected.style.display = 'block';
+
+            // Set a timeout to reverse the visibility after 1 second
+            setTimeout(() => {
+              copyButton.style.display = 'inline-block';
+              linkCollected.style.display = 'none';
+            }, 1000);
+          })
+          .catch(err => {
+            console.error('Failed to copy URL: ', err);
+          });
+      });
+    } else {
+      console.error('Button or confirmation div not found');
+    }
+  });
+</script>
+</div><a id="sharegamebutton" data-w-id="9db54890-a1f7-1225-607a-07ab603cff9e" class="gbuttonpurple w-button">Share today’s game ⤴️</a><a id="linkcollected" data-w-id="661c485f-2c6e-1e22-8010-daa0d0a1012a" class="gbuttonpurple link w-button">Link copied to clipboard!</a>
+  <div class="addiv">
+  </div>
+  <div id="finalcountdown" class="textblue">Continue playing&nbsp;15</div></div></div></div><div id="GPopDiv" data-w-id="b14ec7a4-1854-741f-5e13-0d09b37c8a2f" class="gdiv pop"><div class="gdivinnersmall"><div class="g3col"><a id="showgame" data-w-id="8adcb491-73c1-ec1d-8645-59dcf137ed76" href="#" class="gbuttonblue w-button">Back</a></div><div class="g3col"></div><div class="g3col"></div></div><div class="gpopdiv"><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Tap to select a clue</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Enter your guess</div></div><div class="g2col"><div class="textpurple">ENTR</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Correct letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Incorrect letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv yellow">B</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Example: TENSIONS</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">T</div><div id="1Clue3" class="cluetextdiv emoji">😬</div><div id="1Clue3" class="cluetextdiv emoji">🏹</div><div id="1Clue3" class="cluetextdiv">S</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">No guess limit</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv emoji">👍</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Use hints for help</div></div><div class="g2col"><div class="textblue">HINT</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Solve the headline</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">A</div><div id="1Clue3" class="cluetextdiv green">B</div><div id="1Clue3" class="cluetextdiv green">C</div><div id="1Clue3" class="cluetextdiv green">D</div></div></div></div></div>
+</body>
+</html>

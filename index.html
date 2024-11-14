@@ -794,49 +794,13 @@ function selectNextColumn() {
       }
     });
   });
-</script></div><div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script">
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const copyButton = document.getElementById('sharegamebutton');
-    const linkCollected = document.getElementById('linkcollected');
-
-    // Check if elements exist
-    if (copyButton && linkCollected) {
-      copyButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default action of <a> tag
-
-        // Copy the current page URL to the clipboard
-        navigator.clipboard.writeText(window.location.href)
-          .then(() => {
-            console.log('URL copied to clipboard');
-
-            // Hide the share button and show the confirmation message
-            copyButton.style.display = 'none';
-            linkCollected.style.display = 'block';
-
-            // Set a timeout to reverse the visibility after 1 second
-            setTimeout(() => {
-              copyButton.style.display = 'inline-block';
-              linkCollected.style.display = 'none';
-            }, 1000);
-          })
-          .catch(err => {
-            console.error('Failed to copy URL: ', err);
-          });
-      });
-    } else {
-      console.error('Button or confirmation div not found');
-    }
-  });
 </script>
-</div>
-  
-  <div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script">
+</div><div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script">
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const copyButton = document.getElementById('sharegamebutton');
     const linkCollected = document.getElementById('linkcollected');
-    
+
     // Check if elements exist
     if (copyButton && linkCollected) {
       copyButton.addEventListener('click', function(event) {
@@ -846,7 +810,7 @@ function selectNextColumn() {
         navigator.clipboard.writeText(window.location.href)
           .then(() => {
             console.log('URL copied to clipboard');
-            
+
             // Hide the share button and show the confirmation message
             copyButton.style.display = 'none';
             linkCollected.style.display = 'block';
@@ -867,8 +831,8 @@ function selectNextColumn() {
   });
 </script>
 </div><a id="sharegamebutton" data-w-id="9db54890-a1f7-1225-607a-07ab603cff9e" class="gbuttonpurple w-button">Share today’s game ⤴️</a><a id="linkcollected" data-w-id="661c485f-2c6e-1e22-8010-daa0d0a1012a" class="gbuttonpurple link w-button">Link copied to clipboard!</a>
-  <div class="addiv">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5825917506662262"
+<div class="addiv">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5825917506662262"
      crossorigin="anonymous"></script>
 <!-- D24E Square Display Ad -->
 <ins class="adsbygoogle"
@@ -880,7 +844,7 @@ function selectNextColumn() {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-  </div>
-  <div id="finalcountdown" class="textblue">Continue playing&nbsp;15</div></div></div></div><div id="GPopDiv" data-w-id="b14ec7a4-1854-741f-5e13-0d09b37c8a2f" class="gdiv pop"><div class="gdivinnersmall"><div class="g3col"><a id="showgame" data-w-id="8adcb491-73c1-ec1d-8645-59dcf137ed76" href="#" class="gbuttonblue w-button">Back</a></div><div class="g3col"></div><div class="g3col"></div></div><div class="gpopdiv"><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Tap to select a clue</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Enter your guess</div></div><div class="g2col"><div class="textpurple">ENTR</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Correct letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Incorrect letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv yellow">B</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Example: TENSIONS</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">T</div><div id="1Clue3" class="cluetextdiv emoji">😬</div><div id="1Clue3" class="cluetextdiv emoji">🏹</div><div id="1Clue3" class="cluetextdiv">S</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">No guess limit</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv emoji">👍</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Use hints for help</div></div><div class="g2col"><div class="textblue">HINT</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Solve the headline</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">A</div><div id="1Clue3" class="cluetextdiv green">B</div><div id="1Clue3" class="cluetextdiv green">C</div><div id="1Clue3" class="cluetextdiv green">D</div></div></div></div></div>
+</div>
+<div id="finalcountdown" class="textblue">Continue playing&nbsp;15</div></div></div></div><div id="GPopDiv" data-w-id="b14ec7a4-1854-741f-5e13-0d09b37c8a2f" class="gdiv pop"><div class="gdivinnersmall"><div class="g3col"><a id="showgame" data-w-id="8adcb491-73c1-ec1d-8645-59dcf137ed76" href="#" class="gbuttonblue w-button">Back</a></div><div class="g3col"></div><div class="g3col"></div></div><div class="gpopdiv"><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Tap to select a clue</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Enter your guess</div></div><div class="g2col"><div class="textpurple">ENTR</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Correct letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">C</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Incorrect letters go</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv yellow">B</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Example: TENSIONS</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv">T</div><div id="1Clue3" class="cluetextdiv emoji">😬</div><div id="1Clue3" class="cluetextdiv emoji">🏹</div><div id="1Clue3" class="cluetextdiv">S</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">No guess limit</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv emoji">👍</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Use hints for help</div></div><div class="g2col"><div class="textblue">HINT</div></div></div><div class="gdivinnerbig pop"><div class="g2col"><div class="textblue">Solve the headline</div></div><div class="g2col"><div id="1Clue3" class="cluetextdiv green">A</div><div id="1Clue3" class="cluetextdiv green">B</div><div id="1Clue3" class="cluetextdiv green">C</div><div id="1Clue3" class="cluetextdiv green">D</div></div></div></div></div>
 </body>
 </html>

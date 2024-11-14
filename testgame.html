@@ -72,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     let playedGames = JSON.parse(localStorage.getItem("playedGames")) || [];
     const savedGameState = JSON.parse(localStorage.getItem("currentGameState")) || {};
     const games = [
-        {
+    {
       "date": "2024-11-04",
       "gameDateFormatted": "4 Nov 2024",
       "words": [
@@ -214,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       ],
       "firstHintLetter": "O",
       "thirdHintLetter": "N"
-    }
+    }    
     ];
 
     let currentGameDate = null;
@@ -446,16 +446,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     function useHint() {
       if (hintCount >= maxHints) return;
+
       hintCount += 1;
+      showPopup(`Hint used! Hints left: ${maxHints - hintCount}`);
       saveGameState();
     }
 
     function validateGuess() {
-      if (!isColumnFilled()) return;
+      if (!isColumnFilled()) {
+        showPopup("NOT ENOUGH LETTERS");
+        return;
+      }
+      const selectedColumn = document.getElementById(currentSelectedColumn);
+      const guess = Array.from(selectedColumn.querySelectorAll('.letterdivblank')).map(div => div.textContent.trim()).join("");
+      const correctAnswer = answers[currentSelectedColumn];
+
+      if (correctAnswer) {
+        let isCorrect = true;
+        Array.from(selectedColumn.querySelectorAll('.letterdivblank')).forEach((div, index) => {
+          if (guess[index] === correctAnswer[index]) {
+            div.style.backgroundColor = '#2da701';
+            div.dataset.correct = "true";
+          } else {
+            isCorrect = false;
+            div.style.backgroundColor = '#c95700';
+            setTimeout(() => div.textContent = '', 1500);
+          }
+        });
+
+        if (isCorrect) {
+          selectedColumn.dataset.correct = "true";
+          updateGuessCounter(true);
+        } else {
+          updateGuessCounter(false);
+        }
+      }
       saveGameState();
     }
 
-    // Keyboard event listeners
+    document.getElementById('hintbutton').addEventListener('click', useHint);
     document.querySelectorAll('.divkey').forEach(key => {
       key.addEventListener('click', function() {
         const keyText = key.textContent.trim();
@@ -470,53 +499,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
     });
-
     ['Col1', 'Col2', 'Col3', 'Col4', 'Col5'].forEach(colId => {
-      const column = document.getElementById(colId);
-      if (column) {
-        column.addEventListener('click', function() {
-          selectColumn(colId);
-        });
-      }
-    });
-  });
-</script>
-
-</div>
-  
-  <div id="gamejava" class="divcode w-embed"></div></div><div id="GDiv.Fin" class="gdiv fin"><div class="gdivinnersmall"><div class="g3col"></div><div class="g3col"><div class="titletext">Daily Detective Reporter</div></div><div class="g3col"></div></div><div class="gdivinnerbig"><div class="gpopdiv"><div id="finalheadline" class="textblue"></div><div class="gdivinnerbig pop"><div class="g2col"><div id="finalguesscount" class="textpurple">Guesses: 0</div></div><div class="g2col"><div id="finalhintcount" class="textpurple">Hints: 0</div></div></div><div id="finalgamedate" class="textblue">Game date:</div><div class="w-embed w-script">
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const copyButton = document.getElementById('sharegamebutton');
-    const linkCollected = document.getElementById('linkcollected');
-    
-    // Check if elements exist
-    if (copyButton && linkCollected) {
-      copyButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default action of <a> tag
-
-        // Copy the current page URL to the clipboard
-        navigator.clipboard.writeText(window.location.href)
-          .then(() => {
-            console.log('URL copied to clipboard');
-            
-            // Hide the share button and show the confirmation message
-            copyButton.style.display = 'none';
-            linkCollected.style.display = 'block';
-
-            // Set a timeout to reverse the visibility after 1 second
-            setTimeout(() => {
-              copyButton.style.display = 'inline-block';
-              linkCollected.style.display = 'none';
-            }, 1000);
-          })
-          .catch(err => {
-            console.error('Failed to copy URL: ', err);
-          });
+      document.getElementById(colId).addEventListener('click', function() {
+        selectColumn(colId);
       });
-    } else {
-      console.error('Button or confirmation div not found');
-    }
+    });
   });
 </script>
 </div><a id="sharegamebutton" data-w-id="9db54890-a1f7-1225-607a-07ab603cff9e" class="gbuttonpurple w-button">Share today’s game ⤴️</a><a id="linkcollected" data-w-id="661c485f-2c6e-1e22-8010-daa0d0a1012a" class="gbuttonpurple link w-button">Link copied to clipboard!</a>

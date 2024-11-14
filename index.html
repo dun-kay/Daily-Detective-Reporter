@@ -141,7 +141,44 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("DOMContentLoaded", function() {
     const currentDate = new Date().toISOString().split('T')[0];
     let playedGames = JSON.parse(localStorage.getItem("playedGames")) || [];
-    const games = [
+    const savedGameState = JSON.parse(localStorage.getItem("currentGameState")) || {};
+
+    // Function to save current game state
+    function saveGameState() {
+      const state = {
+        guessCount,
+        hintCount,
+        selectedColumn: currentSelectedColumn,
+        guesses: Array.from(document.querySelectorAll('.letterdivblank')).map(div => div.textContent),
+        currentGameDate
+      };
+      localStorage.setItem("currentGameState", JSON.stringify(state));
+    }
+
+    // Function to load game state
+    function loadGameState() {
+      if (savedGameState && savedGameState.currentGameDate === currentDate) {
+        guessCount = savedGameState.guessCount || 0;
+        hintCount = savedGameState.hintCount || 0;
+        currentSelectedColumn = savedGameState.selectedColumn || null;
+        
+        const blanks = document.querySelectorAll('.letterdivblank');
+        if (blanks) {
+          blanks.forEach((div, index) => {
+            if (savedGameState.guesses && savedGameState.guesses[index]) {
+              div.textContent = savedGameState.guesses[index];
+            }
+          });
+        }
+        console.log("Game state loaded from localStorage");
+      } else {
+        localStorage.removeItem("currentGameState"); // Clear outdated state if it's a new day
+      }
+    }
+
+    function displayGame(game) {
+      currentGameDate = game.date;
+      loadGameState(); // Load saved game state on display
     {
       "date": "2024-11-04",
       "gameDateFormatted": "4 Nov 2024",
@@ -526,6 +563,8 @@ function showNoMoreGamesPopup() {
         if (!blank.textContent.trim()) {
           blank.textContent = letter;
           break;
+
+                saveGameState(); // Save after inserting a letter
         }
       }
     }
@@ -539,6 +578,8 @@ function showNoMoreGamesPopup() {
         if (blank.textContent.trim() && blank.dataset.correct !== "true") {
           blank.textContent = '';
           break;
+
+                saveGameState(); // Save after inserting a letter
         }
       }
     }
@@ -592,6 +633,9 @@ function showNoMoreGamesPopup() {
 
       hintActions[hintCount - 1]();
     }
+         saveGameState(); // Save after using a hint
+    }
+
 
     function fillLetterHints(letter) {
       Object.keys(answers).forEach(colId => {
@@ -671,6 +715,7 @@ function showNoMoreGamesPopup() {
             updateGuessCounter(false);
           }
         }, 200);
+              saveGameState(); // Save after inserting a letter
       }
     }
 

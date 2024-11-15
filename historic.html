@@ -313,25 +313,20 @@ function loadNextGame() {
   console.log("Current Date:", currentDate);
   console.log("Played Games List:", playedGames);
 
-  // Check if today's game is unplayed
-  let todayGame = games.find(game => game.date === currentDate && !playedGames.includes(game.date));
+  // Filter out games that have already been played
+  const unplayedGames = games.filter(game => !playedGames.includes(game.date));
 
-  if (todayGame) {
-    console.log("Loading today's game:", todayGame.date);
-    displayGame(todayGame); // Display today’s game if unplayed
+  if (unplayedGames.length > 0) {
+    // Shuffle the unplayed games
+    const shuffledGames = unplayedGames.sort(() => Math.random() - 0.5);
+
+    // Select the first game from the shuffled list
+    const randomGame = shuffledGames[0];
+    console.log("Loading a random unplayed game:", randomGame.date);
+    displayGame(randomGame);
   } else {
-    // If today’s game has been played, find the most recent unplayed game
-    const nextMostRecentUnplayedGame = games
-      .filter(game => !playedGames.includes(game.date) && new Date(game.date) < new Date(currentDate))
-      .sort((a, b) => new Date(b.date) - new Date(a.date))[0]; // Sort in descending date order and take the newest unplayed game
-
-    if (nextMostRecentUnplayedGame) {
-      console.log("Loading next most recent unplayed game:", nextMostRecentUnplayedGame.date);
-      displayGame(nextMostRecentUnplayedGame);
-    } else {
-      console.log("All games have been played!");
-      showNoMoreGamesPopup(); // Show message when no more unplayed games are available
-    }
+    console.log("All games have been played!");
+    showNoMoreGamesPopup(); // Show message when no more unplayed games are available
   }
 }
 

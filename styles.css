@@ -53,7 +53,8 @@ h1,h2,h3,h4,h5,h6{margin-bottom:10px;font-weight:700}h1{margin-top:20px;font-siz
   user-select: none;         /* Standard */
   touch-action: manipulation; /* Limits touch event behaviors */
 }
-.divkey.enter.makersmark{background-color:#0f1936;justify-content:center;align-items:center;width:170px;height:32px;margin:8px 4px 4px;font-size:12px}
+.divkey.enter.makersmark{background-color:#0f1936;justify-content:center;align-items:left;width:auto;height:auto;margin:8px 4px 4px;font-size:12px;padding:8px;}
+.divkey.enter.makersmark.historic{background-color:#b392de;}
 .divkey.bks{
   background-color:#323d73;width:40px;font-size:22px;
   -webkit-user-select: none; /* Chrome/Safari */
@@ -64,6 +65,18 @@ h1,h2,h3,h4,h5,h6{margin-bottom:10px;font-weight:700}h1{margin-top:20px;font-siz
 }
 .letterdivblank{
   color:#fff;background-color:#414e96;border-radius:3px;flex-flow:row;justify-content:center;align-items:center;width:25px;height:25px;margin:2px;padding:0;font-size:23px;font-weight:700;display:flex;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;touch-action: manipulation;
+}
+.gamesbuttondiv {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  justify-content: space-between; /* Space between items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 8px; /* Spacing between items */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ */
+  user-select: none;         /* Standard */
+  touch-action: manipulation; /* Limits touch event behaviors */
 }
 .letterdivblank.blank{background-color:#414e96;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;touch-action: manipulation;}
 .letterdivselected{background-color:#b392de;border-radius:3px;justify-content:center;align-items:center;width:25px;height:25px;margin:2px;display:flex;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;touch-action: manipulation;}

@@ -313,16 +313,31 @@ function loadNextGame() {
   console.log("Current Date:", currentDate);
   console.log("Played Games List:", playedGames);
 
-  // Filter out games that have already been played
+  // Check if there's an ongoing game stored in localStorage
+  const storedGameDate = localStorage.getItem("currentGameDate");
+
+  if (storedGameDate && !playedGames.includes(storedGameDate)) {
+    // Load the stored game if it hasn't been played yet
+    const storedGame = games.find(game => game.date === storedGameDate);
+    if (storedGame) {
+      console.log("Loading stored game:", storedGame.date);
+      displayGame(storedGame);
+      return;
+    }
+  }
+
+  // If no stored game or it has been played, find a new game
   const unplayedGames = games.filter(game => !playedGames.includes(game.date));
 
   if (unplayedGames.length > 0) {
-    // Shuffle the unplayed games
+    // Shuffle the unplayed games and pick one at random
     const shuffledGames = unplayedGames.sort(() => Math.random() - 0.5);
-
-    // Select the first game from the shuffled list
     const randomGame = shuffledGames[0];
     console.log("Loading a random unplayed game:", randomGame.date);
+
+    // Store the selected game in localStorage
+    localStorage.setItem("currentGameDate", randomGame.date);
+
     displayGame(randomGame);
   } else {
     console.log("All games have been played!");
@@ -330,6 +345,18 @@ function loadNextGame() {
   }
 }
 
+function markGameAsPlayed() {
+  if (currentGameDate && !playedGames.includes(currentGameDate)) {
+    playedGames.push(currentGameDate);
+    localStorage.setItem("playedGames", JSON.stringify(playedGames));
+    console.log("Game marked as played:", currentGameDate);
+
+    // Clear the current game from localStorage
+    localStorage.removeItem("currentGameDate");
+  } else {
+    console.log("Game was already marked as played:", currentGameDate);
+  }
+}
 
 function showNoMoreGamesPopup() {
   // Check if a popup already exists

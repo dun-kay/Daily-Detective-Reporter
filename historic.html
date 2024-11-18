@@ -127,149 +127,149 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentDate = new Date().toISOString().split('T')[0];
     let playedGames = JSON.parse(localStorage.getItem("playedGames")) || [];
     const games = [
-    {
-      "date": "1990-11-04",
-      "gameDateFormatted": "4 Nov 1990",
-      "words": [
-        { "word": "HECKLED", "clues": ["H", "E", "C", "📣"] },
-        { "word": "ROYALS", "clues": ["👑", "A", "L", "S"] },
-        { "word": "FACE", "clues": ["F", "😳", "🧍", "E"] },
-        { "word": "FLOOD", "clues": ["F", "🌧️", "💧", "D"] },
-        { "word": "ANGER", "clues": ["A", "N", "G", "😠"] }
-      ],
-      "firstHintLetter": "A",
-      "thirdHintLetter": "E"
-    },
-    {
-      "date": "1990-11-05",
-      "gameDateFormatted": "5 Nov 1990",
-      "words": [
-        { "word": "GERMAN", "clues": ["🇩🇪", "M", "A", "N"] },
-        { "word": "GOVERNMENT", "clues": ["G", "🏛️", "💼", "T"] },
-        { "word": "COLLAPSE", "clues": ["C", "O", "L", "💥"] },
-        { "word": "LOOKING", "clues": ["L", "🧐", "🔍", "G"] },
-        { "word": "LIKELY", "clues": ["L", "I", "K", "✔️"] }
-      ],
-      "firstHintLetter": "E",
-      "thirdHintLetter": "A"
-    },
-    {
-      "date": "1990-11-06",
-      "gameDateFormatted": "6 Nov 1990",
-      "words": [
-        { "word": "TRUMP", "clues": ["T", "👱‍♂️", "🍊", "P"] },
-        { "word": "WINS", "clues": ["W", "🏆", "🎉", "S"] },
-        { "word": "ELECTION", "clues": ["🗳️", "I", "O", "N"] },
-        { "word": "DECISIVELY", "clues": ["D", "E", "C", "👏"] },
-        { "word": "AGAIN", "clues": ["A", "🔁", "➿", "N"] }
-      ],
-      "firstHintLetter": "E",
-      "thirdHintLetter": "I"
-    },
-    {
-      "date": "1990-11-07",
-      "gameDateFormatted": "7 Nov 1990",
-      "words": [
-        { "word": "CLIMATE", "clues": ["C", "🌍", "🌡️", "E"] },
-        { "word": "CONFERENCE", "clues": ["C", "O", "N", "🗣️"] },
-        { "word": "OIL", "clues": ["O", "🦕", "🛢", "⛽"] },
-        { "word": "DEAL", "clues": ["D", "🤝", "💰", "L"] },
-        { "word": "PLAYGROUND", "clues": ["P", "L", "A", "🛝"] }
-      ],
-      "firstHintLetter": "E",
-      "thirdHintLetter": "A"
-    },
-    {
-      "date": "1990-11-08",
-      "gameDateFormatted": "8 Nov 1990",
-      "words": [
-        { "word": "AMSTERDAM", "clues": ["🇳🇱", "D", "A", "M"] },
-        { "word": "RIOT", "clues": ["R", "🔥", "🚓", "T"] },
-        { "word": "TARGETS", "clues": ["T", "A", "R", "🎯"] },
-        { "word": "ISRAELI", "clues": ["🇮🇱", "E", "L", "I"] },
-        { "word": "FANS", "clues": ["F", "🎉", "👥", "S"] }
-      ],
-      "firstHintLetter": "T",
-      "thirdHintLetter": "A"
-    },
-    {
-      "date": "1990-11-09",
-      "gameDateFormatted": "9 Nov 1990",
-      "words": [
-        { "word": "PAKISTAN", "clues": ["P", "A", "K", "🇵🇰"] },
-        { "word": "STATION", "clues": ["🚉", "I", "O", "N"] },
-        { "word": "BOMBING", "clues": ["B", "💥", "🚨", "G"] },
-        { "word": "KILLS", "clues": ["K", "I", "💀", "S"] },
-        { "word": "DOZENS", "clues": ["D", "🔢", "N", "S"] }
-      ],
-      "firstHintLetter": "I",
-      "thirdHintLetter": "A"
-    },
-    {
-      "date": "1990-11-10",
-      "gameDateFormatted": "10 Nov 1990",
-      "words": [
-        { "word": "MILESTONE", "clues": ["M", "🪨", "🧱", "E"] },
-        { "word": "CLOSE", "clues": ["C", "L", "O", "⏭"] },
-        { "word": "BITCOIN", "clues": ["B", "I", "T", "🪙"] },
-        { "word": "PRICE", "clues": ["P", "📊", "💲", "E"] },
-        { "word": "RECORD", "clues": ["R", "🔝", "📈", "D"] }
-      ],
-      "firstHintLetter": "I",
-      "thirdHintLetter": "E"
-    },
-    {
-      "date": "1990-11-11",
-      "gameDateFormatted": "11 Nov 1990",
-      "words": [
-        { "word": "HAITI", "clues": ["🇭🇹", "I", "T", "I"] },
-        { "word": "LEADER", "clues": ["L", "🏛️", "⚖️", "R"] },
-        { "word": "FIRED", "clues": ["F", "💼", "🔥", "D"] },
-        {  "word": "VIOLENCE", "clues": ["V", "⚔️", "💪", "E"] },
-        { "word": "INTENSIFIES", "clues": ["I", "N", "T", "⬆️"] }
-      ],
-      "firstHintLetter": "E",
-      "thirdHintLetter": "I"
-    },
-    {
-      "date": "1990-11-12",
-      "gameDateFormatted": "12 Nov 1990",
-      "words": [
-        { "word": "CAR", "clues": ["🏎", "🚗", "🛻", "R"] },
-        { "word": "STRIKES", "clues": ["S", "⚡️", "💥", "S"] },
-        { "word": "SOUTH", "clues": ["🧭", "⬇️", "T", "H"] },
-        {  "word": "CHINA", "clues": ["🇨🇳", "I", "N", "A"] },
-        { "word": "CROWD", "clues": ["C", "🧑‍🤝‍🧑", "🏟", "D"] }
-      ],
-      "firstHintLetter": "I",
-      "thirdHintLetter": "R"
-    },
-    {
-      "date": "1990-11-13",
-      "gameDateFormatted": "13 Nov 1990",
-      "words": [
-        { "word": "ESCAPED", "clues": ["E", "🏃", "🚓", "D"] },
-        { "word": "RUSSIAN", "clues": ["🪆", "I", "A", "N"] },
-        { "word": "WHALE", "clues": ["W", "🐋", "🐳", "E"] },
-        {  "word": "NOT", "clues": ["🙅", "❎", "🛑", "T"] },
-        { "word": "SPY", "clues": ["S", "🕵", "🔫", "🪖"] }
-      ],
-      "firstHintLetter": "E",
-      "thirdHintLetter": "A"
-    },
-    {
-      "date": "1990-11-14",
-      "gameDateFormatted": "14 Nov 1990",
-      "words": [
-        { "word": "TRUMP", "clues": ["R", "U", "M", "P"] },
-        { "word": "TAKES", "clues": ["T", "O", "O", "S"] },
-        { "word": "FULL", "clues": ["F", "🌕", "💯", "🚰"] },
-        {  "word": "CONGRESS", "clues": ["🏛", "E", "S", "S"] },
-        { "word": "CONTROL", "clues": ["C", "🎮", "🛂", "L"] }
-      ],
-      "firstHintLetter": "O",
-      "thirdHintLetter": "N"
-    }
+  {
+    "date": "0030-04-07",
+    "gameDateFormatted": "7 Apr 30",
+    "words": [
+      { "word": "CHRIST", "clues": ["✝️", "H", "R", "T"] },
+      { "word": "CRUCIFIED", "clues": ["C", "✝️", "U", "D"] },
+      { "word": "FOLLOWERS", "clues": ["F", "💒", "L", "S"] },
+      { "word": "EXPECT", "clues": ["E", "🤔", "C", "T"] },
+      { "word": "RESURRECTION", "clues": ["R", "👼", "U", "N"] }
+    ],
+    "firstHintLetter": "C",
+    "thirdHintLetter": "F"
+  },
+  {
+    "date": "0079-08-24",
+    "gameDateFormatted": "24 Aug 79",
+    "words": [
+      { "word": "POMPEII", "clues": ["P", "🔥", "M", "I"] },
+      { "word": "VOLCANO", "clues": ["V", "🌋", "L", "N"] },
+      { "word": "ERUPTS", "clues": ["E", "💥", "P", "S"] },
+      { "word": "THOUSANDS", "clues": ["T", "👥", "O", "S"] },
+      { "word": "DIE", "clues": ["D", "💀", "I", "E"] }
+    ],
+    "firstHintLetter": "P",
+    "thirdHintLetter": "E"
+  },
+  {
+    "date": "0312-10-28",
+    "gameDateFormatted": "28 Oct 312",
+    "words": [
+      { "word": "CONSTANTINE", "clues": ["C", "👑", "S", "E"] },
+      { "word": "CONVERTS", "clues": ["C", "✝️", "N", "S"] },
+      { "word": "AFTER", "clues": ["A", "💡", "T", "R"] },
+      { "word": "CROSS", "clues": ["C", "✝️", "O", "S"] },
+      { "word": "VISION", "clues": ["V", "👁️", "I", "N"] }
+    ],
+    "firstHintLetter": "C",
+    "thirdHintLetter": "A"
+  },
+  {
+    "date": "0410-08-24",
+    "gameDateFormatted": "24 Aug 410",
+    "words": [
+      { "word": "BARBARIANS", "clues": ["B", "⚔️", "R", "S"] },
+      { "word": "SACK", "clues": ["S", "🔥", "C", "K"] },
+      { "word": "ROME", "clues": ["R", "🏛️", "M", "E"] },
+      { "word": "EMPIRE", "clues": ["E", "👑", "P", "R"] },
+      { "word": "FALLS", "clues": ["F", "💔", "L", "S"] }
+    ],
+    "firstHintLetter": "B",
+    "thirdHintLetter": "R"
+  },
+  {
+    "date": "0452-06-15",
+    "gameDateFormatted": "15 Jun 452",
+    "words": [
+      { "word": "ATTILA", "clues": ["A", "⚔️", "I", "A"] },
+      { "word": "INVADES", "clues": ["I", "🚶", "N", "S"] },
+      { "word": "ITALY", "clues": ["I", "🇮🇹", "A", "Y"] },
+      { "word": "ROME", "clues": ["R", "🏛️", "M", "E"] },
+      { "word": "TERRIFIED", "clues": ["T", "😱", "R", "D"] }
+    ],
+    "firstHintLetter": "A",
+    "thirdHintLetter": "I"
+  },
+  {
+    "date": "0610-07-10",
+    "gameDateFormatted": "10 Jul 610",
+    "words": [
+      { "word": "MUHAMMAD", "clues": ["M", "🌙", "H", "D"] },
+      { "word": "STARTS", "clues": ["S", "🏁", "T", "S"] },
+      { "word": "ISLAM", "clues": ["I", "☪️", "L", "M"] },
+      { "word": "AFTER", "clues": ["A", "➡️", "T", "R"] },
+      { "word": "VISION", "clues": ["V", "👁️", "S", "N"] }
+    ],
+    "firstHintLetter": "M",
+    "thirdHintLetter": "S"
+  },
+  {
+    "date": "0632-06-08",
+    "gameDateFormatted": "8 Jun 632",
+    "words": [
+      { "word": "MUHAMMAD", "clues": ["M", "☪️", "H", "D"] },
+      { "word": "DIES", "clues": ["D", "⚰️", "I", "S"] },
+      { "word": "ISLAMIC", "clues": ["I", "☪️", "L", "C"] },
+      { "word": "EMPIRE", "clues": ["E", "🏰", "P", "E"] },
+      { "word": "EXPANDS", "clues": ["E", "↔️", "P", "S"] }
+    ],
+    "firstHintLetter": "M",
+    "thirdHintLetter": "I"
+  },
+  {
+    "date": "0800-12-25",
+    "gameDateFormatted": "25 Dec 800",
+    "words": [
+      { "word": "FIRST", "clues": ["F", "1️⃣", "R", "T"] },
+      { "word": "HOLY", "clues": ["H", "⛪", "L", "Y"] },
+      { "word": "ROMAN", "clues": ["R", "🏛️", "M", "N"] },
+      { "word": "EMPEROR", "clues": ["E", "👑", "P", "R"] },
+      { "word": "CROWNED", "clues": ["C", "👑", "O", "D"] }
+    ],
+    "firstHintLetter": "F",
+    "thirdHintLetter": "R"
+  },
+  {
+    "date": "1000-06-08",
+    "gameDateFormatted": "8 Jun 1000",
+    "words": [
+      { "word": "VIKINGS", "clues": ["V", "🛡️", "K", "S"] },
+      { "word": "DISCOVER", "clues": ["D", "🔍", "S", "R"] },
+      { "word": "FAR", "clues": ["F", "➡️", "R", " "] },
+      { "word": "NORTH", "clues": ["N", "⬆️", "R", "H"] },
+      { "word": "LAND", "clues": ["L", "🌍", "N", "D"] }
+    ],
+    "firstHintLetter": "V",
+    "thirdHintLetter": "D"
+  },
+  {
+    "date": "1066-10-14",
+    "gameDateFormatted": "14 Oct 1066",
+    "words": [
+      { "word": "WILLIAM", "clues": ["W", "⚔️", "L", "M"] },
+      { "word": "INVADES", "clues": ["I", "🚶", "A", "S"] },
+      { "word": "ENGLAND", "clues": ["E", "🇬🇧", "L", "D"] },
+      { "word": "CLAIMS", "clues": ["C", "📜", "A", "S"] },
+      { "word": "THRONE", "clues": ["T", "👑", "O", "E"] }
+    ],
+    "firstHintLetter": "W",
+    "thirdHintLetter": "E"
+  },
+  {
+    "date": "2001-09-11",
+    "gameDateFormatted": "11 Sep 2001",
+    "words": [
+      { "word": "TERROR", "clues": ["T", "💣", "R", "R"] },
+      { "word": "ATTACK", "clues": ["A", "🔥", "T", "K"] },
+      { "word": "DESTROYS", "clues": ["D", "💥", "R", "S"] },
+      { "word": "TWIN", "clues": ["T", "🏢", "I", "N"] },
+      { "word": "TOWERS", "clues": ["T", "🏢", "W", "S"] }
+    ],
+    "firstHintLetter": "T",
+    "thirdHintLetter": "A"
+  }
   ];
 
     let currentGameDate = null;

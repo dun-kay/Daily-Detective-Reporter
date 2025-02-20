@@ -936,7 +936,7 @@ function displayFinalResults() {
   const gameDate = document.getElementById('gamedate').textContent;
   document.getElementById('finalgamedate').textContent = `Game date: ${gameDate}`;
 
-  let countdown = 7;
+  let countdown = 10;
   const countdownDisplay = document.getElementById('finalcountdown');
   countdownDisplay.textContent = `Keep playing ${countdown}`;
 
@@ -957,6 +957,10 @@ function displayFinalResults() {
       window.location.href = "https://dailydetectivereporter.com/";
     }
   }, 1000);
+
+    if (window.currentGame.redirectURL) {
+    document.getElementById('finalImageLink').href = window.currentGame.redirectURL;
+  }
 }
 
     document.getElementById('hintbutton').addEventListener('click', useHint);

@@ -892,7 +892,7 @@ function selectNextColumn() {
       const gameDate = document.getElementById('gamedate').textContent;
       document.getElementById('finalgamedate').textContent = `Game date: ${gameDate}`;
 
-      let countdown = 8;
+      let countdown = 10;
       const countdownDisplay = document.getElementById('finalcountdown');
       countdownDisplay.textContent = `Keep playing ${countdown}`;
 
@@ -904,6 +904,9 @@ function selectNextColumn() {
           location.reload();
         }
       }, 1000);
+        if (window.currentGame.redirectURL) {
+    document.getElementById('finalImageLink').href = window.currentGame.redirectURL;
+  }
     }
 
     document.getElementById('hintbutton').addEventListener('click', useHint);

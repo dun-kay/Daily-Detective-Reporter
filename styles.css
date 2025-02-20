@@ -26,7 +26,17 @@ h1,h2,h3,h4,h5,h6{margin-bottom:10px;font-weight:700}h1{margin-top:20px;font-siz
 .cluetextdiv.green{background-color:#2da700;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;touch-action: manipulation;}
 .cluetextdiv.yellow{background-color:#c95700;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;touch-action: manipulation;}
 .cluetextdiv.emoji{flex-flow:row;justify-content:center;align-items:center;font-size:19px;line-height:20px;display:flex;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;touch-action: manipulation;}
-.g2col{justify-content:flex-start;align-items:flex-start;width:50%;margin:0;display:flex}.gpopdiv{grid-column-gap:8px;grid-row-gap:8px;background-color:#0f1936;border-radius:10px;flex-flow:column;flex:1;align-items:stretch;margin:4px;padding:8px;display:flex}.gbuttonpurple{text-align:center;text-transform:none;background-color:#b392de;border-radius:5px;margin-top:16px;margin-bottom:4px;font-size:14px;line-height:18px;display:block}.gbuttonpurple.link{display:none}.addiv{width:300px;min-width:auto;max-width:none;height:150px;min-height:auto;max-height:none}.divkeyboardrow{grid-column-gap:2px;grid-row-gap:2px;flex-flow:row;justify-content:center;align-items:center;margin-top:2px;margin-bottom:2px;display:flex}
+.g2col{justify-content:flex-start;align-items:flex-start;width:50%;margin:0;display:flex}.gpopdiv{grid-column-gap:8px;grid-row-gap:8px;background-color:#0f1936;border-radius:10px;flex-flow:column;flex:1;align-items:stretch;margin:4px;padding:8px;display:flex}.gbuttonpurple{text-align:center;text-transform:none;background-color:#b392de;border-radius:5px;margin-top:16px;margin-bottom:4px;font-size:14px;line-height:18px;display:block}.gbuttonpurple.link{display:none}
+.addiv {
+    width: 300px;
+    min-width: auto;
+    max-width: none;
+    height: 150px;
+    min-height: auto;
+    max-height: none;
+    margin: 8px 0;
+}
+.divkeyboardrow{grid-column-gap:2px;grid-row-gap:2px;flex-flow:row;justify-content:center;align-items:center;margin-top:2px;margin-bottom:2px;display:flex}
 .divkey{
   cursor:pointer;background-color:#414e96;border-radius:3px;flex-flow:row;justify-content:center;align-items:center;width:30px;height:38px;margin:2px;padding:2px;display:flex;
   -webkit-user-select: none; /* Chrome/Safari */

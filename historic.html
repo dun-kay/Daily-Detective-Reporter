@@ -716,7 +716,7 @@ function showNoMoreGamesPopup() {
 
     function useHint() {
       if (hintCount >= maxHints) {
-        showPopup("NO HINTS LEFT");
+        showPopup("PLEASE USE YOUR BRAIN, NO HINTS LEFT 🤪🕵️‍♀");
         return;
       }
 
@@ -872,7 +872,7 @@ function selectNextColumn() {
         document.body.appendChild(popup);
       }
 
-      popup.textContent = "YOU SOLVED IT! 🎊🎊";
+      popup.textContent = "CONGRATS YOU SOLVED IT 📜🕵️‍♀️";
       popup.style.display = 'block';
 
       setTimeout(() => {
@@ -886,7 +886,7 @@ function selectNextColumn() {
     function displayFinalResults() {
       document.getElementById('finalguesscount').textContent = `Guesses: ${guessCount}`;
       document.getElementById('finalhintcount').textContent = `Hints: ${Math.min(hintCount, 3)}`;
-      document.getElementById('finalheadline').textContent = `YOU SOLVED IT! ${finalHeadline}`;
+      document.getElementById('finalheadline').textContent = `YOU SOLVED IT 🗝🕵️‍♀️: ${finalHeadline}`;
 
       const gameDate = document.getElementById('gamedate').textContent;
       document.getElementById('finalgamedate').textContent = `Game date: ${gameDate}`;
